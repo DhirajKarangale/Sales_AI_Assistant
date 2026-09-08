@@ -93,3 +93,8 @@ The `projects` table stores information about various projects managed by the or
   - **Foreign Table:** salespersons
   - **Foreign Column:** id
   - **Description:** Links each project to a specific salesperson, allowing tracking of salesperson activities and responsibilities.
+
+- **salespersons.projects[]** (Incoming Array Reference):
+  - **Source Table:** salespersons
+  - **Source Column:** projects
+  - **Description:** `salespersons.projects[]` contains the IDs of projects assigned to that salesperson; each ID corresponds to `projects.id`, creating a one-to-many relationship where one salesperson can manage multiple projects.

@@ -32,9 +32,9 @@ The `salespersons` table stores information about sales personnel, including the
 
 ### `projects`
 - **Data Type:** ARRAY
-- **Description:** An array of project IDs that the salesperson is associated with.
+- **Description:** contains the IDs of projects assigned to that salesperson.
 - **Business Use:** Tracks the projects that the salesperson is involved in.
-- **How it affects the record:** Provides a list of projects that the salesperson is responsible for or contributes to.
+- **How it affects the record:** Each ID corresponds to `projects.id`, creating a one-to-many relationship where one salesperson can manage multiple projects.
 - **Sample Values:**
   - {c892e32e-2cc2-4b99-9885-db2720e34467,adf674db-dd0b-4da6-ab57-4b8c805ee221,ef93a7c8-1cac-417f-8bc9-f6942fe64962}
   - {123c9741-8b80-444c-8931-4aaddbee569d,e0f03eb0-c71c-4d73-b50a-df05f62a7ef5,9101b2de-d408-4645-93ff-6296678b7da8}
@@ -81,8 +81,8 @@ The `salespersons` table stores information about sales personnel, including the
 ## Primary Keys
 - `id`: The primary key for the `salespersons` table, ensuring each salesperson has a unique identifier.
 
-## Foreign Keys
-- **Not Available**: The schema does not specify any foreign keys.
+## Foreign Keys / Relationships
+- **projects[]**: Array reference to `projects.id`. Contains the IDs of projects assigned to that salesperson, creating a one-to-many relationship where one salesperson can manage multiple projects.
 
 ## Additional Information
 - **Indexing:** Not explicitly mentioned in the schema.

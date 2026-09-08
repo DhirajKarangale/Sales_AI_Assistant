@@ -1,33 +1,11 @@
 # Database Schema Overview
 
 ## Table List
-- **otps**
-- **users**
 - **projects**
 - **events**
 - **salespersons**
 
 ## Table Descriptions
-
-### otps
-- **Description**: This table stores One-Time Passwords (OTPs) for user authentication.
-- **Business Purpose**: Used to manage and validate OTPs during the user registration or login process.
-- **Details**:
-  - **id**: Unique identifier for the OTP.
-  - **created_at**: Timestamp of when the OTP was generated.
-  - **email**: Email address associated with the OTP.
-  - **otp**: The actual OTP value.
-
-### users
-- **Description**: This table stores user information.
-- **Business Purpose**: Manages user accounts and profiles.
-- **Details**:
-  - **id**: Unique identifier for the user.
-  - **created_at**: Timestamp of when the user account was created.
-  - **entriescount**: Count of entries or activities associated with the user.
-  - **username**: Username chosen by the user.
-  - **email**: Email address of the user.
-  - **about**: Additional information about the user.
 
 ### projects
 - **Description**: This table stores information about projects.
