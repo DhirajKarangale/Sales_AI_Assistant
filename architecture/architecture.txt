@@ -1,6 +1,3 @@
-I am working on assessment 
-requirement sales person some queries and depending on data we have to answer them.
-
 Example sales person Queries:
 1. What's happening with Figma Deal ?
 2. Did we close the last deal, and what was the final amount?
@@ -8,7 +5,15 @@ Example sales person Queries:
 4. Top 5 deals by amount in prospect
 5. What's the difference between the last 5 closed-won vs closed-lost deals — lessons to learn? 
 
-Questions 2
+
+
+
+I am working on assessment 
+requirement sales person some queries and depending on data we have to answer them.
+Here there are few sales person who are handling certain set of customers,
+That sales person managing certain deals of customers end to end.
+
+Example sales person Queries:
 What’s the latest update on the Figma Enterprise project?
 What happened in the last meeting for CRM Migration with Acme Corp?
 What was discussed in the latest email about the AI Analytics Platform?
@@ -39,11 +44,6 @@ Don't end responses with follow-up suggestions or questions unless necessary.
 
 
 
-Here there are few sales person who are handling certain set of customers,
-That sales person managing certain deals of customers end to end.
-
-
-
 Divided into 2 different problems.
 1: Storing data
 2: Responding to user query
@@ -55,7 +55,6 @@ Divided into 2 different problems.
 We are getting data from different sources with webhooks like 
 emails and calendar events from outlooks,
 Meetings transcripts from teams,
-
 
 a. Storing data in SQL db.
 Store meet data when happen, users, transcript links/email links.
@@ -95,7 +94,6 @@ Projects, sales person involved, customers, people involved from customer side, 
 We have to update all this things including Status and data after getting new data each time for each project.
 
 After updating all the wikis update knowledge graph.
-
 
 
 c: Creating Structure for db,
