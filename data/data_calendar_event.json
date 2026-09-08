@@ -1,0 +1,2702 @@
+[
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "cae44656-17d7-4a73-814e-f59d63988bfc",
+    "iCalUId": "cae44656-17d7-4a73-814e-f59d63988bfc@company.com",
+    "subject": "CRM Migration Kickoff",
+    "bodyPreview": "Customer meeting for CRM Migration. Discussion with Acme Corp regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for CRM Migration. Discussion with Acme Corp regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-10T10:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-10T10:45:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "alice.johnson@acmecorp.com",
+          "name": "Alice Johnson"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-09T10:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "mark.wilson@acmecorp.com",
+          "name": "Mark Wilson"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-08-09T10:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-ec37371f@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 15,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-cae44656-17d7-4a73-814e-f59d63988bfc"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-cae44656-17d7-4a73-814e-f59d63988bfc",
+    "webLink": "https://outlook.office365.com/owa/?itemid=cae44656-17d7-4a73-814e-f59d63988bfc",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "Acme Corp"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+      "customerName": "Acme Corp",
+      "projectName": "CRM Migration"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "342f042d-fb66-450a-a3a6-369f9d4097c6",
+    "iCalUId": "342f042d-fb66-450a-a3a6-369f9d4097c6@company.com",
+    "subject": "Cloud Upgrade Review",
+    "bodyPreview": "Customer meeting for Cloud Upgrade. Discussion with Acme Corp regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Cloud Upgrade. Discussion with Acme Corp regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-11T11:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-11T12:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "sarah.brown@acmecorp.com",
+          "name": "Sarah Brown"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-10T11:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "david.miller@acmecorp.com",
+          "name": "David Miller"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-08-10T11:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-ec37371f@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-342f042d-fb66-450a-a3a6-369f9d4097c6"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-342f042d-fb66-450a-a3a6-369f9d4097c6",
+    "webLink": "https://outlook.office365.com/owa/?itemid=342f042d-fb66-450a-a3a6-369f9d4097c6",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "Acme Corp"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+      "customerName": "Acme Corp",
+      "projectName": "Cloud Upgrade"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "14625f62-3fda-4dd6-9809-7f3a7fd129f7",
+    "iCalUId": "14625f62-3fda-4dd6-9809-7f3a7fd129f7@company.com",
+    "subject": "AI Analytics Requirements",
+    "bodyPreview": "Customer meeting for AI Analytics Platform. Discussion with TechNova regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for AI Analytics Platform. Discussion with TechNova regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-12T12:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-12T13:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Acme Corp HQ",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "james.anderson@technova.com",
+          "name": "James Anderson"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-11T12:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "emily.davis@technova.com",
+          "name": "Emily Davis"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-11T12:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-ec37371f@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 15,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-14625f62-3fda-4dd6-9809-7f3a7fd129f7"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-14625f62-3fda-4dd6-9809-7f3a7fd129f7",
+    "webLink": "https://outlook.office365.com/owa/?itemid=14625f62-3fda-4dd6-9809-7f3a7fd129f7",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "TechNova"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+      "customerName": "TechNova",
+      "projectName": "AI Analytics Platform"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "59368d6c-51ee-4961-a016-bc1beb66852a",
+    "iCalUId": "59368d6c-51ee-4961-a016-bc1beb66852a@company.com",
+    "subject": "Data Warehouse Planning",
+    "bodyPreview": "Customer meeting for Data Warehouse. Discussion with TechNova regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Data Warehouse. Discussion with TechNova regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-13T13:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-13T13:45:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "michael.taylor@technova.com",
+          "name": "Michael Taylor"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-12T13:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "sophia.moore@technova.com",
+          "name": "Sophia Moore"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-12T13:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-710c8ecf@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 15,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-59368d6c-51ee-4961-a016-bc1beb66852a"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-59368d6c-51ee-4961-a016-bc1beb66852a",
+    "webLink": "https://outlook.office365.com/owa/?itemid=59368d6c-51ee-4961-a016-bc1beb66852a",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "TechNova"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+      "customerName": "TechNova",
+      "projectName": "Data Warehouse"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "e653f667-7013-46ac-a75d-df6510f160a4",
+    "iCalUId": "e653f667-7013-46ac-a75d-df6510f160a4@company.com",
+    "subject": "Security Platform Review",
+    "bodyPreview": "Customer meeting for Security Platform. Discussion with SecureNet regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Security Platform. Discussion with SecureNet regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-14T10:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-14T11:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Customer Conference Room",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "daniel.thomas@securenet.com",
+          "name": "Daniel Thomas"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-13T10:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "olivia.martin@securenet.com",
+          "name": "Olivia Martin"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-08-13T10:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-710c8ecf@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-e653f667-7013-46ac-a75d-df6510f160a4"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-e653f667-7013-46ac-a75d-df6510f160a4",
+    "webLink": "https://outlook.office365.com/owa/?itemid=e653f667-7013-46ac-a75d-df6510f160a4",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "SecureNet"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+      "customerName": "SecureNet",
+      "projectName": "Security Platform"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "ff9ecdaf-1eda-4245-8666-15480b5d49ef",
+    "iCalUId": "ff9ecdaf-1eda-4245-8666-15480b5d49ef@company.com",
+    "subject": "Customer Portal Demo",
+    "bodyPreview": "Customer meeting for Customer Portal. Discussion with HealthPlus regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Customer Portal. Discussion with HealthPlus regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-15T11:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-15T12:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "william.jackson@healthplus.com",
+          "name": "William Jackson"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-14T11:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "emma.white@healthplus.com",
+          "name": "Emma White"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-14T11:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-710c8ecf@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 15,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-ff9ecdaf-1eda-4245-8666-15480b5d49ef"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-ff9ecdaf-1eda-4245-8666-15480b5d49ef",
+    "webLink": "https://outlook.office365.com/owa/?itemid=ff9ecdaf-1eda-4245-8666-15480b5d49ef",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "HealthPlus"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+      "customerName": "HealthPlus",
+      "projectName": "Customer Portal"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "9b4a1de3-b2cb-4bfa-9f8d-3a8e011e819f",
+    "iCalUId": "9b4a1de3-b2cb-4bfa-9f8d-3a8e011e819f@company.com",
+    "subject": "ERP Integration Discussion",
+    "bodyPreview": "Customer meeting for ERP Integration. Discussion with GlobalMart regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for ERP Integration. Discussion with GlobalMart regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-16T12:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-16T12:45:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "benjamin.harris@globalmart.com",
+          "name": "Benjamin Harris"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-08-15T12:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "mia.clark@globalmart.com",
+          "name": "Mia Clark"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-15T12:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-f52f2cff@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 15,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-9b4a1de3-b2cb-4bfa-9f8d-3a8e011e819f"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-9b4a1de3-b2cb-4bfa-9f8d-3a8e011e819f",
+    "webLink": "https://outlook.office365.com/owa/?itemid=9b4a1de3-b2cb-4bfa-9f8d-3a8e011e819f",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "GlobalMart"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+      "customerName": "GlobalMart",
+      "projectName": "ERP Integration"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "48ccf8a8-c85b-4cf1-aff8-720549c47565",
+    "iCalUId": "48ccf8a8-c85b-4cf1-aff8-720549c47565@company.com",
+    "subject": "Payment Gateway Review",
+    "bodyPreview": "Customer meeting for Payment Gateway. Discussion with PayFlow regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Payment Gateway. Discussion with PayFlow regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-17T13:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-17T14:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "henry.lewis@payflow.com",
+          "name": "Henry Lewis"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-16T13:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "charlotte.lee@payflow.com",
+          "name": "Charlotte Lee"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-16T13:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-f52f2cff@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 15,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-48ccf8a8-c85b-4cf1-aff8-720549c47565"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-48ccf8a8-c85b-4cf1-aff8-720549c47565",
+    "webLink": "https://outlook.office365.com/owa/?itemid=48ccf8a8-c85b-4cf1-aff8-720549c47565",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "PayFlow"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+      "customerName": "PayFlow",
+      "projectName": "Payment Gateway"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "6d3e3113-4dad-4750-a842-f25dde682363",
+    "iCalUId": "6d3e3113-4dad-4750-a842-f25dde682363@company.com",
+    "subject": "Mobile App Review",
+    "bodyPreview": "Customer meeting for Mobile App. Discussion with TravelEase regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Mobile App. Discussion with TravelEase regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-18T10:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-18T11:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Acme Corp HQ",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "alexander.walker@travelease.com",
+          "name": "Alexander Walker"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-17T10:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "amelia.hall@travelease.com",
+          "name": "Amelia Hall"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-17T10:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-f52f2cff@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 15,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-6d3e3113-4dad-4750-a842-f25dde682363"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-6d3e3113-4dad-4750-a842-f25dde682363",
+    "webLink": "https://outlook.office365.com/owa/?itemid=6d3e3113-4dad-4750-a842-f25dde682363",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "TravelEase"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+      "customerName": "TravelEase",
+      "projectName": "Mobile App"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "087ed97c-96eb-42fc-8497-67fff292980b",
+    "iCalUId": "087ed97c-96eb-42fc-8497-67fff292980b@company.com",
+    "subject": "Figma Enterprise Discussion",
+    "bodyPreview": "Customer meeting for Figma Enterprise. Discussion with Figma regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Figma Enterprise. Discussion with Figma regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-19T11:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-19T11:45:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "matthew.allen@figma.com",
+          "name": "Matthew Allen"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-08-18T11:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "harper.young@figma.com",
+          "name": "Harper Young"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-18T11:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-09cfdc46@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-087ed97c-96eb-42fc-8497-67fff292980b"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-087ed97c-96eb-42fc-8497-67fff292980b",
+    "webLink": "https://outlook.office365.com/owa/?itemid=087ed97c-96eb-42fc-8497-67fff292980b",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "Figma"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "09cfdc46-a939-4899-8a40-17cda3f97786",
+      "customerName": "Figma",
+      "projectName": "Figma Enterprise"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "832dfe48-8093-4412-8d6e-5be773ee7782",
+    "iCalUId": "832dfe48-8093-4412-8d6e-5be773ee7782@company.com",
+    "subject": "Marketing Automation Review",
+    "bodyPreview": "Customer meeting for Marketing Automation. Discussion with Acme Corp regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Marketing Automation. Discussion with Acme Corp regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-20T12:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-20T13:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Customer Conference Room",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "ethan.king@acmecorp.com",
+          "name": "Ethan King"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-08-19T12:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "evelyn.wright@acmecorp.com",
+          "name": "Evelyn Wright"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-19T12:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-09cfdc46@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 15,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-832dfe48-8093-4412-8d6e-5be773ee7782"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-832dfe48-8093-4412-8d6e-5be773ee7782",
+    "webLink": "https://outlook.office365.com/owa/?itemid=832dfe48-8093-4412-8d6e-5be773ee7782",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "Acme Corp"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "09cfdc46-a939-4899-8a40-17cda3f97786",
+      "customerName": "Acme Corp",
+      "projectName": "Marketing Automation"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "dcfaecef-4b29-4f3c-9afc-06dbca334cc6",
+    "iCalUId": "dcfaecef-4b29-4f3c-9afc-06dbca334cc6@company.com",
+    "subject": "DevOps Transformation Planning",
+    "bodyPreview": "Customer meeting for DevOps Transformation. Discussion with TechNova regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for DevOps Transformation. Discussion with TechNova regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-21T13:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-21T14:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "daniel.scott@technova.com",
+          "name": "Daniel Scott"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-20T13:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "abigail.green@technova.com",
+          "name": "Abigail Green"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-08-20T13:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-09cfdc46@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-dcfaecef-4b29-4f3c-9afc-06dbca334cc6"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-dcfaecef-4b29-4f3c-9afc-06dbca334cc6",
+    "webLink": "https://outlook.office365.com/owa/?itemid=dcfaecef-4b29-4f3c-9afc-06dbca334cc6",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "TechNova"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "09cfdc46-a939-4899-8a40-17cda3f97786",
+      "customerName": "TechNova",
+      "projectName": "DevOps Transformation"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "d7541952-82be-4410-a42a-c37d53a9acfb",
+    "iCalUId": "d7541952-82be-4410-a42a-c37d53a9acfb@company.com",
+    "subject": "HR Management System Review",
+    "bodyPreview": "Customer meeting for HR Management System. Discussion with PeopleFirst regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for HR Management System. Discussion with PeopleFirst regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-22T10:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-22T10:45:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "jacob.baker@peoplefirst.com",
+          "name": "Jacob Baker"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-21T10:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "ella.adams@peoplefirst.com",
+          "name": "Ella Adams"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-21T10:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-99ff091f@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-d7541952-82be-4410-a42a-c37d53a9acfb"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-d7541952-82be-4410-a42a-c37d53a9acfb",
+    "webLink": "https://outlook.office365.com/owa/?itemid=d7541952-82be-4410-a42a-c37d53a9acfb",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "PeopleFirst"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "99ff091f-bf2c-429d-a556-22f59525412f",
+      "customerName": "PeopleFirst",
+      "projectName": "HR Management System"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "32ee940d-0454-4bd2-a2af-89f9407307b6",
+    "iCalUId": "32ee940d-0454-4bd2-a2af-89f9407307b6@company.com",
+    "subject": "AI Support Platform Demo",
+    "bodyPreview": "Customer meeting for AI Support Platform. Discussion with PeopleFirst regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for AI Support Platform. Discussion with PeopleFirst regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-23T11:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-23T12:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "logan.nelson@peoplefirst.com",
+          "name": "Logan Nelson"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-08-22T11:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "grace.hill@peoplefirst.com",
+          "name": "Grace Hill"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-22T11:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-99ff091f@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 15,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-32ee940d-0454-4bd2-a2af-89f9407307b6"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-32ee940d-0454-4bd2-a2af-89f9407307b6",
+    "webLink": "https://outlook.office365.com/owa/?itemid=32ee940d-0454-4bd2-a2af-89f9407307b6",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "PeopleFirst"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "99ff091f-bf2c-429d-a556-22f59525412f",
+      "customerName": "PeopleFirst",
+      "projectName": "AI Support Platform"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "d4024ba9-bfcb-4d3b-8134-ecf232fc0519",
+    "iCalUId": "d4024ba9-bfcb-4d3b-8134-ecf232fc0519@company.com",
+    "subject": "Enterprise Data Platform Review",
+    "bodyPreview": "Customer meeting for Enterprise Data Platform. Discussion with DataSphere regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Enterprise Data Platform. Discussion with DataSphere regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-24T12:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-24T13:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Acme Corp HQ",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "noah.campbell@datasphere.com",
+          "name": "Noah Campbell"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-23T12:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "chloe.mitchell@datasphere.com",
+          "name": "Chloe Mitchell"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-23T12:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-99ff091f@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-d4024ba9-bfcb-4d3b-8134-ecf232fc0519"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-d4024ba9-bfcb-4d3b-8134-ecf232fc0519",
+    "webLink": "https://outlook.office365.com/owa/?itemid=d4024ba9-bfcb-4d3b-8134-ecf232fc0519",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "DataSphere"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "99ff091f-bf2c-429d-a556-22f59525412f",
+      "customerName": "DataSphere",
+      "projectName": "Enterprise Data Platform"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "11b40b16-6435-4927-a911-3c57717b8ebf",
+    "iCalUId": "11b40b16-6435-4927-a911-3c57717b8ebf@company.com",
+    "subject": "CRM Migration Status Review",
+    "bodyPreview": "Customer meeting for CRM Migration. Discussion with Acme Corp regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for CRM Migration. Discussion with Acme Corp regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-25T13:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-25T13:45:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "liam.roberts@acmecorp.com",
+          "name": "Liam Roberts"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-24T13:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "zoe.carter@acmecorp.com",
+          "name": "Zoe Carter"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-24T13:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-ec37371f@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 15,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-11b40b16-6435-4927-a911-3c57717b8ebf"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-11b40b16-6435-4927-a911-3c57717b8ebf",
+    "webLink": "https://outlook.office365.com/owa/?itemid=11b40b16-6435-4927-a911-3c57717b8ebf",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "Acme Corp"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+      "customerName": "Acme Corp",
+      "projectName": "CRM Migration"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "297f62b6-5652-4f75-832d-6b3f2278451c",
+    "iCalUId": "297f62b6-5652-4f75-832d-6b3f2278451c@company.com",
+    "subject": "AI Analytics Product Demo",
+    "bodyPreview": "Customer meeting for AI Analytics Platform. Discussion with TechNova regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for AI Analytics Platform. Discussion with TechNova regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-26T10:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-26T11:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Customer Conference Room",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "lucas.phillips@technova.com",
+          "name": "Lucas Phillips"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-08-25T10:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "lily.evans@technova.com",
+          "name": "Lily Evans"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-25T10:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-ec37371f@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-297f62b6-5652-4f75-832d-6b3f2278451c"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-297f62b6-5652-4f75-832d-6b3f2278451c",
+    "webLink": "https://outlook.office365.com/owa/?itemid=297f62b6-5652-4f75-832d-6b3f2278451c",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "TechNova"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+      "customerName": "TechNova",
+      "projectName": "AI Analytics Platform"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "b85f0934-7874-4307-a8de-4267b45cac1f",
+    "iCalUId": "b85f0934-7874-4307-a8de-4267b45cac1f@company.com",
+    "subject": "Data Warehouse Status Review",
+    "bodyPreview": "Customer meeting for Data Warehouse. Discussion with TechNova regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Data Warehouse. Discussion with TechNova regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-27T11:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-27T12:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "mason.turner@technova.com",
+          "name": "Mason Turner"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-26T11:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "hannah.torres@technova.com",
+          "name": "Hannah Torres"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-26T11:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-710c8ecf@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 15,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-b85f0934-7874-4307-a8de-4267b45cac1f"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-b85f0934-7874-4307-a8de-4267b45cac1f",
+    "webLink": "https://outlook.office365.com/owa/?itemid=b85f0934-7874-4307-a8de-4267b45cac1f",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "TechNova"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+      "customerName": "TechNova",
+      "projectName": "Data Warehouse"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "b47953d4-b74e-4c88-806d-6727fd1b4bba",
+    "iCalUId": "b47953d4-b74e-4c88-806d-6727fd1b4bba@company.com",
+    "subject": "Security Proposal Discussion",
+    "bodyPreview": "Customer meeting for Security Platform. Discussion with SecureNet regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Security Platform. Discussion with SecureNet regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-28T12:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-28T12:45:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "oliver.parker@securenet.com",
+          "name": "Oliver Parker"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-27T12:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "sofia.collins@securenet.com",
+          "name": "Sofia Collins"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-08-27T12:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-710c8ecf@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-b47953d4-b74e-4c88-806d-6727fd1b4bba"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-b47953d4-b74e-4c88-806d-6727fd1b4bba",
+    "webLink": "https://outlook.office365.com/owa/?itemid=b47953d4-b74e-4c88-806d-6727fd1b4bba",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "SecureNet"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+      "customerName": "SecureNet",
+      "projectName": "Security Platform"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "86c89563-c435-403e-b06c-bcf481dc1d43",
+    "iCalUId": "86c89563-c435-403e-b06c-bcf481dc1d43@company.com",
+    "subject": "ERP Technical Review",
+    "bodyPreview": "Customer meeting for ERP Integration. Discussion with GlobalMart regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for ERP Integration. Discussion with GlobalMart regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-29T13:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-29T14:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "james.edwards@globalmart.com",
+          "name": "James Edwards"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-28T13:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "avery.stewart@globalmart.com",
+          "name": "Avery Stewart"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-08-28T13:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-f52f2cff@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-86c89563-c435-403e-b06c-bcf481dc1d43"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-86c89563-c435-403e-b06c-bcf481dc1d43",
+    "webLink": "https://outlook.office365.com/owa/?itemid=86c89563-c435-403e-b06c-bcf481dc1d43",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "GlobalMart"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+      "customerName": "GlobalMart",
+      "projectName": "ERP Integration"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "f87e0bb2-640f-47c7-a87c-87ca814d69a2",
+    "iCalUId": "f87e0bb2-640f-47c7-a87c-87ca814d69a2@company.com",
+    "subject": "Payment Commercial Review",
+    "bodyPreview": "Customer meeting for Payment Gateway. Discussion with PayFlow regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Payment Gateway. Discussion with PayFlow regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-30T10:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-30T11:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Acme Corp HQ",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "jack.sanchez@payflow.com",
+          "name": "Jack Sanchez"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-08-29T10:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "ella.morris@payflow.com",
+          "name": "Ella Morris"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-08-29T10:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-f52f2cff@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-f87e0bb2-640f-47c7-a87c-87ca814d69a2"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-f87e0bb2-640f-47c7-a87c-87ca814d69a2",
+    "webLink": "https://outlook.office365.com/owa/?itemid=f87e0bb2-640f-47c7-a87c-87ca814d69a2",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "PayFlow"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+      "customerName": "PayFlow",
+      "projectName": "Payment Gateway"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "0c840838-4202-483b-902b-f88eba833def",
+    "iCalUId": "0c840838-4202-483b-902b-f88eba833def@company.com",
+    "subject": "Mobile App Final Demo",
+    "bodyPreview": "Customer meeting for Mobile App. Discussion with TravelEase regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Mobile App. Discussion with TravelEase regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-08-31T11:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-08-31T11:45:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "william.rogers@travelease.com",
+          "name": "William Rogers"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-30T11:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "scarlett.reed@travelease.com",
+          "name": "Scarlett Reed"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-30T11:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-f52f2cff@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 15,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-0c840838-4202-483b-902b-f88eba833def"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-0c840838-4202-483b-902b-f88eba833def",
+    "webLink": "https://outlook.office365.com/owa/?itemid=0c840838-4202-483b-902b-f88eba833def",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "TravelEase"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+      "customerName": "TravelEase",
+      "projectName": "Mobile App"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "9eacb64e-629d-4b61-9601-e28125c67abf",
+    "iCalUId": "9eacb64e-629d-4b61-9601-e28125c67abf@company.com",
+    "subject": "Figma Enterprise Pricing",
+    "bodyPreview": "Customer meeting for Figma Enterprise. Discussion with Figma regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Figma Enterprise. Discussion with Figma regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-09-01T12:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-09-01T13:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Customer Conference Room",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "leo.cook@figma.com",
+          "name": "Leo Cook"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-08-31T12:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "victoria.morgan@figma.com",
+          "name": "Victoria Morgan"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-08-31T12:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-09cfdc46@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-9eacb64e-629d-4b61-9601-e28125c67abf"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-9eacb64e-629d-4b61-9601-e28125c67abf",
+    "webLink": "https://outlook.office365.com/owa/?itemid=9eacb64e-629d-4b61-9601-e28125c67abf",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "Figma"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "09cfdc46-a939-4899-8a40-17cda3f97786",
+      "customerName": "Figma",
+      "projectName": "Figma Enterprise"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "e86bfdfa-ecf9-411a-9eb2-80d3fb97139a",
+    "iCalUId": "e86bfdfa-ecf9-411a-9eb2-80d3fb97139a@company.com",
+    "subject": "Marketing Proposal Review",
+    "bodyPreview": "Customer meeting for Marketing Automation. Discussion with Acme Corp regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Marketing Automation. Discussion with Acme Corp regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-09-02T13:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-09-02T14:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "benjamin.bell@acmecorp.com",
+          "name": "Benjamin Bell"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-09-01T13:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "aria.murphy@acmecorp.com",
+          "name": "Aria Murphy"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-09-01T13:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-09cfdc46@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-e86bfdfa-ecf9-411a-9eb2-80d3fb97139a"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-e86bfdfa-ecf9-411a-9eb2-80d3fb97139a",
+    "webLink": "https://outlook.office365.com/owa/?itemid=e86bfdfa-ecf9-411a-9eb2-80d3fb97139a",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "Acme Corp"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "09cfdc46-a939-4899-8a40-17cda3f97786",
+      "customerName": "Acme Corp",
+      "projectName": "Marketing Automation"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "b11fb18d-c0bf-4ba2-9119-96177ce88089",
+    "iCalUId": "b11fb18d-c0bf-4ba2-9119-96177ce88089@company.com",
+    "subject": "Infrastructure Planning",
+    "bodyPreview": "Customer meeting for DevOps Transformation. Discussion with TechNova regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for DevOps Transformation. Discussion with TechNova regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-09-03T10:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-09-03T10:45:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "sebastian.bailey@technova.com",
+          "name": "Sebastian Bailey"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-09-02T10:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "nora.rivera@technova.com",
+          "name": "Nora Rivera"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-09-02T10:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-09cfdc46@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-b11fb18d-c0bf-4ba2-9119-96177ce88089"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-b11fb18d-c0bf-4ba2-9119-96177ce88089",
+    "webLink": "https://outlook.office365.com/owa/?itemid=b11fb18d-c0bf-4ba2-9119-96177ce88089",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "TechNova"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "09cfdc46-a939-4899-8a40-17cda3f97786",
+      "customerName": "TechNova",
+      "projectName": "DevOps Transformation"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "0bbefd2c-3a16-483e-8eb7-058b1a66908f",
+    "iCalUId": "0bbefd2c-3a16-483e-8eb7-058b1a66908f@company.com",
+    "subject": "HR Implementation Planning",
+    "bodyPreview": "Customer meeting for HR Management System. Discussion with PeopleFirst regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for HR Management System. Discussion with PeopleFirst regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-09-04T11:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-09-04T12:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "jack.cooper@peoplefirst.com",
+          "name": "Jack Cooper"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-09-03T11:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "layla.richardson@peoplefirst.com",
+          "name": "Layla Richardson"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-09-03T11:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-99ff091f@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 15,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-0bbefd2c-3a16-483e-8eb7-058b1a66908f"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-0bbefd2c-3a16-483e-8eb7-058b1a66908f",
+    "webLink": "https://outlook.office365.com/owa/?itemid=0bbefd2c-3a16-483e-8eb7-058b1a66908f",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "PeopleFirst"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "99ff091f-bf2c-429d-a556-22f59525412f",
+      "customerName": "PeopleFirst",
+      "projectName": "HR Management System"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "23e3cc82-dc28-47fc-b884-831ac7d0e90d",
+    "iCalUId": "23e3cc82-dc28-47fc-b884-831ac7d0e90d@company.com",
+    "subject": "AI Support Demo",
+    "bodyPreview": "Customer meeting for AI Support Platform. Discussion with PeopleFirst regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for AI Support Platform. Discussion with PeopleFirst regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-09-05T12:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-09-05T13:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Acme Corp HQ",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "owen.cox@peoplefirst.com",
+          "name": "Owen Cox"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-09-04T12:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "riley.howard@peoplefirst.com",
+          "name": "Riley Howard"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-09-04T12:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-99ff091f@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-23e3cc82-dc28-47fc-b884-831ac7d0e90d"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-23e3cc82-dc28-47fc-b884-831ac7d0e90d",
+    "webLink": "https://outlook.office365.com/owa/?itemid=23e3cc82-dc28-47fc-b884-831ac7d0e90d",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "PeopleFirst"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "99ff091f-bf2c-429d-a556-22f59525412f",
+      "customerName": "PeopleFirst",
+      "projectName": "AI Support Platform"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "7ca23364-3193-44da-a8d0-27e797d50d4f",
+    "iCalUId": "7ca23364-3193-44da-a8d0-27e797d50d4f@company.com",
+    "subject": "Data Architecture Review",
+    "bodyPreview": "Customer meeting for Enterprise Data Platform. Discussion with DataSphere regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Enterprise Data Platform. Discussion with DataSphere regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-09-06T13:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-09-06T13:45:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "theodore.ward@datasphere.com",
+          "name": "Theodore Ward"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-09-05T13:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "camila.peterson@datasphere.com",
+          "name": "Camila Peterson"
+        },
+        "type": "required",
+        "status": {
+          "response": "tentativelyAccepted",
+          "time": "2026-09-05T13:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-99ff091f@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-7ca23364-3193-44da-a8d0-27e797d50d4f"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-7ca23364-3193-44da-a8d0-27e797d50d4f",
+    "webLink": "https://outlook.office365.com/owa/?itemid=7ca23364-3193-44da-a8d0-27e797d50d4f",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "DataSphere"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "99ff091f-bf2c-429d-a556-22f59525412f",
+      "customerName": "DataSphere",
+      "projectName": "Enterprise Data Platform"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "88d40eff-7def-44ab-b855-577ff8425d16",
+    "iCalUId": "88d40eff-7def-44ab-b855-577ff8425d16@company.com",
+    "subject": "Cloud Migration Planning",
+    "bodyPreview": "Customer meeting for Cloud Upgrade. Discussion with Acme Corp regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Cloud Upgrade. Discussion with Acme Corp regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-09-07T10:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-09-07T11:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Customer Conference Room",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "caleb.gray@acmecorp.com",
+          "name": "Caleb Gray"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-09-06T10:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "maya.ramirez@acmecorp.com",
+          "name": "Maya Ramirez"
+        },
+        "type": "required",
+        "status": {
+          "response": "none",
+          "time": "2026-09-06T10:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-ec37371f@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-88d40eff-7def-44ab-b855-577ff8425d16"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-88d40eff-7def-44ab-b855-577ff8425d16",
+    "webLink": "https://outlook.office365.com/owa/?itemid=88d40eff-7def-44ab-b855-577ff8425d16",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "Acme Corp"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+      "customerName": "Acme Corp",
+      "projectName": "Cloud Upgrade"
+    }
+  },
+  {
+    "@odata.type": "#microsoft.graph.event",
+    "id": "54c45bd0-540f-40d6-bb98-6ba8f6aff971",
+    "iCalUId": "54c45bd0-540f-40d6-bb98-6ba8f6aff971@company.com",
+    "subject": "Customer Portal Launch Planning",
+    "bodyPreview": "Customer meeting for Customer Portal. Discussion with HealthPlus regarding project progress, requirements, commercial considerations, and next steps.",
+    "body": {
+      "contentType": "HTML",
+      "content": "<html><body>Customer meeting for Customer Portal. Discussion with HealthPlus regarding project progress, requirements, commercial considerations, and next steps.</body></html>"
+    },
+    "start": {
+      "dateTime": "2026-09-08T11:00:00",
+      "timeZone": "UTC"
+    },
+    "end": {
+      "dateTime": "2026-09-08T12:00:00",
+      "timeZone": "UTC"
+    },
+    "location": {
+      "displayName": "Microsoft Teams",
+      "locationType": "default"
+    },
+    "attendees": [
+      {
+        "emailAddress": {
+          "address": "nathan.james@healthplus.com",
+          "name": "Nathan James"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-09-07T11:00:00Z"
+        }
+      },
+      {
+        "emailAddress": {
+          "address": "isla.watson@healthplus.com",
+          "name": "Isla Watson"
+        },
+        "type": "required",
+        "status": {
+          "response": "accepted",
+          "time": "2026-09-07T11:00:00Z"
+        }
+      }
+    ],
+    "organizer": {
+      "emailAddress": {
+        "address": "salesperson-710c8ecf@company.com",
+        "name": "Salesperson"
+      }
+    },
+    "isAllDay": false,
+    "isCancelled": false,
+    "isDraft": false,
+    "isOrganizer": true,
+    "isReminderOn": true,
+    "reminderMinutesBeforeStart": 30,
+    "responseRequested": true,
+    "showAs": "busy",
+    "sensitivity": "normal",
+    "importance": "normal",
+    "hasAttachments": false,
+    "hideAttendees": false,
+    "isOnlineMeeting": true,
+    "onlineMeetingProvider": "teamsForBusiness",
+    "onlineMeeting": {
+      "joinUrl": "https://teams.microsoft.com/l/meetup-join/dummy-54c45bd0-540f-40d6-bb98-6ba8f6aff971"
+    },
+    "onlineMeetingUrl": "https://teams.microsoft.com/l/meetup-join/dummy-54c45bd0-540f-40d6-bb98-6ba8f6aff971",
+    "webLink": "https://outlook.office365.com/owa/?itemid=54c45bd0-540f-40d6-bb98-6ba8f6aff971",
+    "type": "singleInstance",
+    "recurrence": null,
+    "seriesMasterId": null,
+    "categories": [
+      "Sales",
+      "HealthPlus"
+    ],
+    "createdDateTime": "2026-09-08T17:46:02.92832Z",
+    "lastModifiedDateTime": "2026-09-08T17:46:02.92832Z",
+    "responseStatus": {
+      "response": "organizer",
+      "time": "0001-01-01T00:00:00Z"
+    },
+    "salesContext": {
+      "salespersonId": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+      "customerName": "HealthPlus",
+      "projectName": "Customer Portal"
+    }
+  }
+]

@@ -1,0 +1,715 @@
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#Collection(microsoft.graph.message)",
+  "value": [
+    {
+      "subscriptionId": "dummy-subscription-ec37371f",
+      "subscriptionExpirationDateTime": "2026-12-31T23:59:59Z",
+      "changeType": "created",
+      "resource": "Users('ec37371f-22f8-4cec-bbd0-74d162bfe67c')/messages('0f8fea17-d61b-40a2-86cd-553144f14cc4')",
+      "resourceData": {
+        "@odata.type": "#Microsoft.Graph.Message",
+        "@odata.id": "Users('ec37371f-22f8-4cec-bbd0-74d162bfe67c')/messages('0f8fea17-d61b-40a2-86cd-553144f14cc4')",
+        "@odata.etag": "W/\"dummy-etag-0f8fea17\"",
+        "id": "0f8fea17-d61b-40a2-86cd-553144f14cc4"
+      },
+      "clientState": "dummy-client-state",
+      "tenantId": "11111111-2222-3333-4444-555555555555",
+      "message": {
+        "@odata.type": "#microsoft.graph.message",
+        "id": "0f8fea17-d61b-40a2-86cd-553144f14cc4",
+        "receivedDateTime": "2026-08-25T09:30:00Z",
+        "sentDateTime": "2026-08-25T09:25:00Z",
+        "subject": "CRM Migration timeline approval",
+        "bodyPreview": "Hi Roman,  Acme Corp has approved the proposed CRM Migration timeline. Please share the final implementation plan and next steps.  Regards, Alice Johnson",
+        "body": {
+          "contentType": "Text",
+          "content": "Hi Roman,\n\nAcme Corp has approved the proposed CRM Migration timeline. Please share the final implementation plan and next steps.\n\nRegards,\nAlice Johnson"
+        },
+        "from": {
+          "emailAddress": {
+            "name": "Alice Johnson",
+            "address": "alice.johnson@acme.com"
+          }
+        },
+        "sender": {
+          "emailAddress": {
+            "name": "Alice Johnson",
+            "address": "alice.johnson@acme.com"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "name": "Roman",
+              "address": "roman@company.com"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "replyTo": [],
+        "importance": "normal",
+        "isRead": false,
+        "hasAttachments": false,
+        "internetMessageId": "<0f8fea17-d61b-40a2-86cd-553144f14cc4@acme.com>",
+        "conversationId": "conv-0f8fea17-d61b-40a2-86cd-553144f14cc4",
+        "conversationIndex": "dummy-conversation-index-0000",
+        "categories": [
+          "Sales",
+          "Acme Corp"
+        ],
+        "webLink": "https://outlook.office365.com/mail/inbox/id/0f8fea17-d61b-40a2-86cd-553144f14cc4",
+        "inferenceClassification": "focused",
+        "flag": {
+          "flagStatus": "notFlagged"
+        },
+        "parentFolderId": "AQMkAD-dummy-inbox-folder",
+        "salesContext": {
+          "salespersonId": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+          "salespersonName": "Roman",
+          "customerName": "Acme Corp",
+          "projectName": "CRM Migration"
+        }
+      }
+    },
+    {
+      "subscriptionId": "dummy-subscription-ec37371f",
+      "subscriptionExpirationDateTime": "2026-12-31T23:59:59Z",
+      "changeType": "created",
+      "resource": "Users('ec37371f-22f8-4cec-bbd0-74d162bfe67c')/messages('ca36d549-5b1c-4862-9862-28e0b2780756')",
+      "resourceData": {
+        "@odata.type": "#Microsoft.Graph.Message",
+        "@odata.id": "Users('ec37371f-22f8-4cec-bbd0-74d162bfe67c')/messages('ca36d549-5b1c-4862-9862-28e0b2780756')",
+        "@odata.etag": "W/\"dummy-etag-ca36d549\"",
+        "id": "ca36d549-5b1c-4862-9862-28e0b2780756"
+      },
+      "clientState": "dummy-client-state",
+      "tenantId": "11111111-2222-3333-4444-555555555555",
+      "message": {
+        "@odata.type": "#microsoft.graph.message",
+        "id": "ca36d549-5b1c-4862-9862-28e0b2780756",
+        "receivedDateTime": "2026-08-26T09:30:00Z",
+        "sentDateTime": "2026-08-26T09:25:00Z",
+        "subject": "AI Analytics pricing revision",
+        "bodyPreview": "Hi Roman,  TechNova would like a revised commercial proposal for the AI Analytics Platform. Please include the updated pricing and licensing assumptions.  Regards, David Miller",
+        "body": {
+          "contentType": "Text",
+          "content": "Hi Roman,\n\nTechNova would like a revised commercial proposal for the AI Analytics Platform. Please include the updated pricing and licensing assumptions.\n\nRegards,\nDavid Miller"
+        },
+        "from": {
+          "emailAddress": {
+            "name": "David Miller",
+            "address": "david.miller@technova.com"
+          }
+        },
+        "sender": {
+          "emailAddress": {
+            "name": "David Miller",
+            "address": "david.miller@technova.com"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "name": "Roman",
+              "address": "roman@company.com"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "replyTo": [],
+        "importance": "normal",
+        "isRead": false,
+        "hasAttachments": false,
+        "internetMessageId": "<ca36d549-5b1c-4862-9862-28e0b2780756@technova.com>",
+        "conversationId": "conv-ca36d549-5b1c-4862-9862-28e0b2780756",
+        "conversationIndex": "dummy-conversation-index-0001",
+        "categories": [
+          "Sales",
+          "TechNova"
+        ],
+        "webLink": "https://outlook.office365.com/mail/inbox/id/ca36d549-5b1c-4862-9862-28e0b2780756",
+        "inferenceClassification": "focused",
+        "flag": {
+          "flagStatus": "notFlagged"
+        },
+        "parentFolderId": "AQMkAD-dummy-inbox-folder",
+        "salesContext": {
+          "salespersonId": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+          "salespersonName": "Roman",
+          "customerName": "TechNova",
+          "projectName": "AI Analytics Platform"
+        }
+      }
+    },
+    {
+      "subscriptionId": "dummy-subscription-710c8ecf",
+      "subscriptionExpirationDateTime": "2026-12-31T23:59:59Z",
+      "changeType": "created",
+      "resource": "Users('710c8ecf-6340-4edf-a4e9-06513d500a59')/messages('80e3b180-5fe3-4a65-917b-8eab5cf764f8')",
+      "resourceData": {
+        "@odata.type": "#Microsoft.Graph.Message",
+        "@odata.id": "Users('710c8ecf-6340-4edf-a4e9-06513d500a59')/messages('80e3b180-5fe3-4a65-917b-8eab5cf764f8')",
+        "@odata.etag": "W/\"dummy-etag-80e3b180\"",
+        "id": "80e3b180-5fe3-4a65-917b-8eab5cf764f8"
+      },
+      "clientState": "dummy-client-state",
+      "tenantId": "11111111-2222-3333-4444-555555555555",
+      "message": {
+        "@odata.type": "#microsoft.graph.message",
+        "id": "80e3b180-5fe3-4a65-917b-8eab5cf764f8",
+        "receivedDateTime": "2026-08-27T09:30:00Z",
+        "sentDateTime": "2026-08-27T09:25:00Z",
+        "subject": "Data Warehouse migration plan",
+        "bodyPreview": "Hi Brock,  We reviewed the Data Warehouse migration plan. Please confirm the migration phases, validation process, and target completion date.  Regards, Sophia Moore",
+        "body": {
+          "contentType": "Text",
+          "content": "Hi Brock,\n\nWe reviewed the Data Warehouse migration plan. Please confirm the migration phases, validation process, and target completion date.\n\nRegards,\nSophia Moore"
+        },
+        "from": {
+          "emailAddress": {
+            "name": "Sophia Moore",
+            "address": "sophia.moore@technova.com"
+          }
+        },
+        "sender": {
+          "emailAddress": {
+            "name": "Sophia Moore",
+            "address": "sophia.moore@technova.com"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "name": "Brock",
+              "address": "brock@company.com"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "replyTo": [],
+        "importance": "normal",
+        "isRead": false,
+        "hasAttachments": false,
+        "internetMessageId": "<80e3b180-5fe3-4a65-917b-8eab5cf764f8@technova.com>",
+        "conversationId": "conv-80e3b180-5fe3-4a65-917b-8eab5cf764f8",
+        "conversationIndex": "dummy-conversation-index-0002",
+        "categories": [
+          "Sales",
+          "TechNova"
+        ],
+        "webLink": "https://outlook.office365.com/mail/inbox/id/80e3b180-5fe3-4a65-917b-8eab5cf764f8",
+        "inferenceClassification": "focused",
+        "flag": {
+          "flagStatus": "notFlagged"
+        },
+        "parentFolderId": "AQMkAD-dummy-inbox-folder",
+        "salesContext": {
+          "salespersonId": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+          "salespersonName": "Brock",
+          "customerName": "TechNova",
+          "projectName": "Data Warehouse"
+        }
+      }
+    },
+    {
+      "subscriptionId": "dummy-subscription-710c8ecf",
+      "subscriptionExpirationDateTime": "2026-12-31T23:59:59Z",
+      "changeType": "created",
+      "resource": "Users('710c8ecf-6340-4edf-a4e9-06513d500a59')/messages('e5bea147-0f6f-4566-a08b-4f16ed62d546')",
+      "resourceData": {
+        "@odata.type": "#Microsoft.Graph.Message",
+        "@odata.id": "Users('710c8ecf-6340-4edf-a4e9-06513d500a59')/messages('e5bea147-0f6f-4566-a08b-4f16ed62d546')",
+        "@odata.etag": "W/\"dummy-etag-e5bea147\"",
+        "id": "e5bea147-0f6f-4566-a08b-4f16ed62d546"
+      },
+      "clientState": "dummy-client-state",
+      "tenantId": "11111111-2222-3333-4444-555555555555",
+      "message": {
+        "@odata.type": "#microsoft.graph.message",
+        "id": "e5bea147-0f6f-4566-a08b-4f16ed62d546",
+        "receivedDateTime": "2026-08-28T09:30:00Z",
+        "sentDateTime": "2026-08-28T09:25:00Z",
+        "subject": "Security Platform security requirements",
+        "bodyPreview": "Hi Brock,  SecureNet needs additional documentation around security controls before we can proceed with the Security Platform proposal.  Regards, Daniel Thomas",
+        "body": {
+          "contentType": "Text",
+          "content": "Hi Brock,\n\nSecureNet needs additional documentation around security controls before we can proceed with the Security Platform proposal.\n\nRegards,\nDaniel Thomas"
+        },
+        "from": {
+          "emailAddress": {
+            "name": "Daniel Thomas",
+            "address": "daniel.thomas@securenet.com"
+          }
+        },
+        "sender": {
+          "emailAddress": {
+            "name": "Daniel Thomas",
+            "address": "daniel.thomas@securenet.com"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "name": "Brock",
+              "address": "brock@company.com"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "replyTo": [],
+        "importance": "normal",
+        "isRead": false,
+        "hasAttachments": false,
+        "internetMessageId": "<e5bea147-0f6f-4566-a08b-4f16ed62d546@securenet.com>",
+        "conversationId": "conv-e5bea147-0f6f-4566-a08b-4f16ed62d546",
+        "conversationIndex": "dummy-conversation-index-0003",
+        "categories": [
+          "Sales",
+          "SecureNet"
+        ],
+        "webLink": "https://outlook.office365.com/mail/inbox/id/e5bea147-0f6f-4566-a08b-4f16ed62d546",
+        "inferenceClassification": "focused",
+        "flag": {
+          "flagStatus": "notFlagged"
+        },
+        "parentFolderId": "AQMkAD-dummy-inbox-folder",
+        "salesContext": {
+          "salespersonId": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+          "salespersonName": "Brock",
+          "customerName": "SecureNet",
+          "projectName": "Security Platform"
+        }
+      }
+    },
+    {
+      "subscriptionId": "dummy-subscription-f52f2cff",
+      "subscriptionExpirationDateTime": "2026-12-31T23:59:59Z",
+      "changeType": "created",
+      "resource": "Users('f52f2cff-2e14-4da5-9c85-3f8114d0d5d6')/messages('9551f9ce-cee5-4181-8cf4-70059ee3150d')",
+      "resourceData": {
+        "@odata.type": "#Microsoft.Graph.Message",
+        "@odata.id": "Users('f52f2cff-2e14-4da5-9c85-3f8114d0d5d6')/messages('9551f9ce-cee5-4181-8cf4-70059ee3150d')",
+        "@odata.etag": "W/\"dummy-etag-9551f9ce\"",
+        "id": "9551f9ce-cee5-4181-8cf4-70059ee3150d"
+      },
+      "clientState": "dummy-client-state",
+      "tenantId": "11111111-2222-3333-4444-555555555555",
+      "message": {
+        "@odata.type": "#microsoft.graph.message",
+        "id": "9551f9ce-cee5-4181-8cf4-70059ee3150d",
+        "receivedDateTime": "2026-08-29T09:30:00Z",
+        "sentDateTime": "2026-08-29T09:25:00Z",
+        "subject": "Payment Gateway commercial terms",
+        "bodyPreview": "Hi Steve,  PayFlow would like to discuss revised payment terms and transaction-volume pricing for the Payment Gateway.  Regards, Charlotte Lee",
+        "body": {
+          "contentType": "Text",
+          "content": "Hi Steve,\n\nPayFlow would like to discuss revised payment terms and transaction-volume pricing for the Payment Gateway.\n\nRegards,\nCharlotte Lee"
+        },
+        "from": {
+          "emailAddress": {
+            "name": "Charlotte Lee",
+            "address": "charlotte.lee@payflow.com"
+          }
+        },
+        "sender": {
+          "emailAddress": {
+            "name": "Charlotte Lee",
+            "address": "charlotte.lee@payflow.com"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "name": "Steve",
+              "address": "steve@company.com"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "replyTo": [],
+        "importance": "normal",
+        "isRead": false,
+        "hasAttachments": false,
+        "internetMessageId": "<9551f9ce-cee5-4181-8cf4-70059ee3150d@payflow.com>",
+        "conversationId": "conv-9551f9ce-cee5-4181-8cf4-70059ee3150d",
+        "conversationIndex": "dummy-conversation-index-0004",
+        "categories": [
+          "Sales",
+          "PayFlow"
+        ],
+        "webLink": "https://outlook.office365.com/mail/inbox/id/9551f9ce-cee5-4181-8cf4-70059ee3150d",
+        "inferenceClassification": "focused",
+        "flag": {
+          "flagStatus": "notFlagged"
+        },
+        "parentFolderId": "AQMkAD-dummy-inbox-folder",
+        "salesContext": {
+          "salespersonId": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+          "salespersonName": "Steve",
+          "customerName": "PayFlow",
+          "projectName": "Payment Gateway"
+        }
+      }
+    },
+    {
+      "subscriptionId": "dummy-subscription-f52f2cff",
+      "subscriptionExpirationDateTime": "2026-12-31T23:59:59Z",
+      "changeType": "created",
+      "resource": "Users('f52f2cff-2e14-4da5-9c85-3f8114d0d5d6')/messages('add6e34d-ac8e-4199-bce8-c943b2471e7b')",
+      "resourceData": {
+        "@odata.type": "#Microsoft.Graph.Message",
+        "@odata.id": "Users('f52f2cff-2e14-4da5-9c85-3f8114d0d5d6')/messages('add6e34d-ac8e-4199-bce8-c943b2471e7b')",
+        "@odata.etag": "W/\"dummy-etag-add6e34d\"",
+        "id": "add6e34d-ac8e-4199-bce8-c943b2471e7b"
+      },
+      "clientState": "dummy-client-state",
+      "tenantId": "11111111-2222-3333-4444-555555555555",
+      "message": {
+        "@odata.type": "#microsoft.graph.message",
+        "id": "add6e34d-ac8e-4199-bce8-c943b2471e7b",
+        "receivedDateTime": "2026-08-30T09:30:00Z",
+        "sentDateTime": "2026-08-30T09:25:00Z",
+        "subject": "Mobile App scope approval",
+        "bodyPreview": "Hi Steve,  TravelEase confirms the final Mobile App scope. We are ready to proceed with the agreed implementation plan.  Regards, Amelia Hall",
+        "body": {
+          "contentType": "Text",
+          "content": "Hi Steve,\n\nTravelEase confirms the final Mobile App scope. We are ready to proceed with the agreed implementation plan.\n\nRegards,\nAmelia Hall"
+        },
+        "from": {
+          "emailAddress": {
+            "name": "Amelia Hall",
+            "address": "amelia.hall@travelease.com"
+          }
+        },
+        "sender": {
+          "emailAddress": {
+            "name": "Amelia Hall",
+            "address": "amelia.hall@travelease.com"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "name": "Steve",
+              "address": "steve@company.com"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "replyTo": [],
+        "importance": "normal",
+        "isRead": false,
+        "hasAttachments": false,
+        "internetMessageId": "<add6e34d-ac8e-4199-bce8-c943b2471e7b@travelease.com>",
+        "conversationId": "conv-add6e34d-ac8e-4199-bce8-c943b2471e7b",
+        "conversationIndex": "dummy-conversation-index-0005",
+        "categories": [
+          "Sales",
+          "TravelEase"
+        ],
+        "webLink": "https://outlook.office365.com/mail/inbox/id/add6e34d-ac8e-4199-bce8-c943b2471e7b",
+        "inferenceClassification": "focused",
+        "flag": {
+          "flagStatus": "notFlagged"
+        },
+        "parentFolderId": "AQMkAD-dummy-inbox-folder",
+        "salesContext": {
+          "salespersonId": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+          "salespersonName": "Steve",
+          "customerName": "TravelEase",
+          "projectName": "Mobile App"
+        }
+      }
+    },
+    {
+      "subscriptionId": "dummy-subscription-09cfdc46",
+      "subscriptionExpirationDateTime": "2026-12-31T23:59:59Z",
+      "changeType": "created",
+      "resource": "Users('09cfdc46-a939-4899-8a40-17cda3f97786')/messages('083b4eab-439e-4327-88c5-2ed06622e6d9')",
+      "resourceData": {
+        "@odata.type": "#Microsoft.Graph.Message",
+        "@odata.id": "Users('09cfdc46-a939-4899-8a40-17cda3f97786')/messages('083b4eab-439e-4327-88c5-2ed06622e6d9')",
+        "@odata.etag": "W/\"dummy-etag-083b4eab\"",
+        "id": "083b4eab-439e-4327-88c5-2ed06622e6d9"
+      },
+      "clientState": "dummy-client-state",
+      "tenantId": "11111111-2222-3333-4444-555555555555",
+      "message": {
+        "@odata.type": "#microsoft.graph.message",
+        "id": "083b4eab-439e-4327-88c5-2ed06622e6d9",
+        "receivedDateTime": "2026-08-31T09:30:00Z",
+        "sentDateTime": "2026-08-31T09:25:00Z",
+        "subject": "Figma Enterprise pricing",
+        "bodyPreview": "Hi Kurt,  Figma is reviewing the enterprise pricing for the Figma Enterprise project. Please send the final pricing breakdown and licensing details.  Regards, Harper Young",
+        "body": {
+          "contentType": "Text",
+          "content": "Hi Kurt,\n\nFigma is reviewing the enterprise pricing for the Figma Enterprise project. Please send the final pricing breakdown and licensing details.\n\nRegards,\nHarper Young"
+        },
+        "from": {
+          "emailAddress": {
+            "name": "Harper Young",
+            "address": "harper.young@figma.com"
+          }
+        },
+        "sender": {
+          "emailAddress": {
+            "name": "Harper Young",
+            "address": "harper.young@figma.com"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "name": "Kurt",
+              "address": "kurt@company.com"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "replyTo": [],
+        "importance": "normal",
+        "isRead": false,
+        "hasAttachments": false,
+        "internetMessageId": "<083b4eab-439e-4327-88c5-2ed06622e6d9@figma.com>",
+        "conversationId": "conv-083b4eab-439e-4327-88c5-2ed06622e6d9",
+        "conversationIndex": "dummy-conversation-index-0006",
+        "categories": [
+          "Sales",
+          "Figma"
+        ],
+        "webLink": "https://outlook.office365.com/mail/inbox/id/083b4eab-439e-4327-88c5-2ed06622e6d9",
+        "inferenceClassification": "focused",
+        "flag": {
+          "flagStatus": "notFlagged"
+        },
+        "parentFolderId": "AQMkAD-dummy-inbox-folder",
+        "salesContext": {
+          "salespersonId": "09cfdc46-a939-4899-8a40-17cda3f97786",
+          "salespersonName": "Kurt",
+          "customerName": "Figma",
+          "projectName": "Figma Enterprise"
+        }
+      }
+    },
+    {
+      "subscriptionId": "dummy-subscription-09cfdc46",
+      "subscriptionExpirationDateTime": "2026-12-31T23:59:59Z",
+      "changeType": "created",
+      "resource": "Users('09cfdc46-a939-4899-8a40-17cda3f97786')/messages('5596020e-132b-4bb6-90fe-d40b4104865e')",
+      "resourceData": {
+        "@odata.type": "#Microsoft.Graph.Message",
+        "@odata.id": "Users('09cfdc46-a939-4899-8a40-17cda3f97786')/messages('5596020e-132b-4bb6-90fe-d40b4104865e')",
+        "@odata.etag": "W/\"dummy-etag-5596020e\"",
+        "id": "5596020e-132b-4bb6-90fe-d40b4104865e"
+      },
+      "clientState": "dummy-client-state",
+      "tenantId": "11111111-2222-3333-4444-555555555555",
+      "message": {
+        "@odata.type": "#microsoft.graph.message",
+        "id": "5596020e-132b-4bb6-90fe-d40b4104865e",
+        "receivedDateTime": "2026-09-01T09:30:00Z",
+        "sentDateTime": "2026-09-01T09:25:00Z",
+        "subject": "Marketing Automation proposal decision",
+        "bodyPreview": "Hi Kurt,  After reviewing the proposal, Acme Corp has decided not to proceed with the Marketing Automation project at this time.  Regards, Evelyn Wright",
+        "body": {
+          "contentType": "Text",
+          "content": "Hi Kurt,\n\nAfter reviewing the proposal, Acme Corp has decided not to proceed with the Marketing Automation project at this time.\n\nRegards,\nEvelyn Wright"
+        },
+        "from": {
+          "emailAddress": {
+            "name": "Evelyn Wright",
+            "address": "evelyn.wright@acme.com"
+          }
+        },
+        "sender": {
+          "emailAddress": {
+            "name": "Evelyn Wright",
+            "address": "evelyn.wright@acme.com"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "name": "Kurt",
+              "address": "kurt@company.com"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "replyTo": [],
+        "importance": "normal",
+        "isRead": false,
+        "hasAttachments": false,
+        "internetMessageId": "<5596020e-132b-4bb6-90fe-d40b4104865e@acme.com>",
+        "conversationId": "conv-5596020e-132b-4bb6-90fe-d40b4104865e",
+        "conversationIndex": "dummy-conversation-index-0007",
+        "categories": [
+          "Sales",
+          "Acme Corp"
+        ],
+        "webLink": "https://outlook.office365.com/mail/inbox/id/5596020e-132b-4bb6-90fe-d40b4104865e",
+        "inferenceClassification": "focused",
+        "flag": {
+          "flagStatus": "notFlagged"
+        },
+        "parentFolderId": "AQMkAD-dummy-inbox-folder",
+        "salesContext": {
+          "salespersonId": "09cfdc46-a939-4899-8a40-17cda3f97786",
+          "salespersonName": "Kurt",
+          "customerName": "Acme Corp",
+          "projectName": "Marketing Automation"
+        }
+      }
+    },
+    {
+      "subscriptionId": "dummy-subscription-99ff091f",
+      "subscriptionExpirationDateTime": "2026-12-31T23:59:59Z",
+      "changeType": "created",
+      "resource": "Users('99ff091f-bf2c-429d-a556-22f59525412f')/messages('fab60642-8894-49c9-a87c-5215b4d6a380')",
+      "resourceData": {
+        "@odata.type": "#Microsoft.Graph.Message",
+        "@odata.id": "Users('99ff091f-bf2c-429d-a556-22f59525412f')/messages('fab60642-8894-49c9-a87c-5215b4d6a380')",
+        "@odata.etag": "W/\"dummy-etag-fab60642\"",
+        "id": "fab60642-8894-49c9-a87c-5215b4d6a380"
+      },
+      "clientState": "dummy-client-state",
+      "tenantId": "11111111-2222-3333-4444-555555555555",
+      "message": {
+        "@odata.type": "#microsoft.graph.message",
+        "id": "fab60642-8894-49c9-a87c-5215b4d6a380",
+        "receivedDateTime": "2026-09-02T09:30:00Z",
+        "sentDateTime": "2026-09-02T09:25:00Z",
+        "subject": "AI Support Platform demo",
+        "bodyPreview": "Hi John,  PeopleFirst would like to schedule a demonstration of the AI Support Platform, especially the automation and escalation capabilities.  Regards, Grace Hill",
+        "body": {
+          "contentType": "Text",
+          "content": "Hi John,\n\nPeopleFirst would like to schedule a demonstration of the AI Support Platform, especially the automation and escalation capabilities.\n\nRegards,\nGrace Hill"
+        },
+        "from": {
+          "emailAddress": {
+            "name": "Grace Hill",
+            "address": "grace.hill@peoplefirst.com"
+          }
+        },
+        "sender": {
+          "emailAddress": {
+            "name": "Grace Hill",
+            "address": "grace.hill@peoplefirst.com"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "name": "John",
+              "address": "john@company.com"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "replyTo": [],
+        "importance": "normal",
+        "isRead": false,
+        "hasAttachments": false,
+        "internetMessageId": "<fab60642-8894-49c9-a87c-5215b4d6a380@peoplefirst.com>",
+        "conversationId": "conv-fab60642-8894-49c9-a87c-5215b4d6a380",
+        "conversationIndex": "dummy-conversation-index-0008",
+        "categories": [
+          "Sales",
+          "PeopleFirst"
+        ],
+        "webLink": "https://outlook.office365.com/mail/inbox/id/fab60642-8894-49c9-a87c-5215b4d6a380",
+        "inferenceClassification": "focused",
+        "flag": {
+          "flagStatus": "notFlagged"
+        },
+        "parentFolderId": "AQMkAD-dummy-inbox-folder",
+        "salesContext": {
+          "salespersonId": "99ff091f-bf2c-429d-a556-22f59525412f",
+          "salespersonName": "John",
+          "customerName": "PeopleFirst",
+          "projectName": "AI Support Platform"
+        }
+      }
+    },
+    {
+      "subscriptionId": "dummy-subscription-99ff091f",
+      "subscriptionExpirationDateTime": "2026-12-31T23:59:59Z",
+      "changeType": "created",
+      "resource": "Users('99ff091f-bf2c-429d-a556-22f59525412f')/messages('6f762d68-50d7-473d-a5b8-06d7e8e41580')",
+      "resourceData": {
+        "@odata.type": "#Microsoft.Graph.Message",
+        "@odata.id": "Users('99ff091f-bf2c-429d-a556-22f59525412f')/messages('6f762d68-50d7-473d-a5b8-06d7e8e41580')",
+        "@odata.etag": "W/\"dummy-etag-6f762d68\"",
+        "id": "6f762d68-50d7-473d-a5b8-06d7e8e41580"
+      },
+      "clientState": "dummy-client-state",
+      "tenantId": "11111111-2222-3333-4444-555555555555",
+      "message": {
+        "@odata.type": "#microsoft.graph.message",
+        "id": "6f762d68-50d7-473d-a5b8-06d7e8e41580",
+        "receivedDateTime": "2026-09-03T09:30:00Z",
+        "sentDateTime": "2026-09-03T09:25:00Z",
+        "subject": "Enterprise Data Platform architecture details",
+        "bodyPreview": "Hi John,  DataSphere needs additional technical architecture details for the Enterprise Data Platform before the next review.  Regards, Chloe Mitchell",
+        "body": {
+          "contentType": "Text",
+          "content": "Hi John,\n\nDataSphere needs additional technical architecture details for the Enterprise Data Platform before the next review.\n\nRegards,\nChloe Mitchell"
+        },
+        "from": {
+          "emailAddress": {
+            "name": "Chloe Mitchell",
+            "address": "chloe.mitchell@datasphere.com"
+          }
+        },
+        "sender": {
+          "emailAddress": {
+            "name": "Chloe Mitchell",
+            "address": "chloe.mitchell@datasphere.com"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "name": "John",
+              "address": "john@company.com"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "replyTo": [],
+        "importance": "normal",
+        "isRead": false,
+        "hasAttachments": false,
+        "internetMessageId": "<6f762d68-50d7-473d-a5b8-06d7e8e41580@datasphere.com>",
+        "conversationId": "conv-6f762d68-50d7-473d-a5b8-06d7e8e41580",
+        "conversationIndex": "dummy-conversation-index-0009",
+        "categories": [
+          "Sales",
+          "DataSphere"
+        ],
+        "webLink": "https://outlook.office365.com/mail/inbox/id/6f762d68-50d7-473d-a5b8-06d7e8e41580",
+        "inferenceClassification": "focused",
+        "flag": {
+          "flagStatus": "notFlagged"
+        },
+        "parentFolderId": "AQMkAD-dummy-inbox-folder",
+        "salesContext": {
+          "salespersonId": "99ff091f-bf2c-429d-a556-22f59525412f",
+          "salespersonName": "John",
+          "customerName": "DataSphere",
+          "projectName": "Enterprise Data Platform"
+        }
+      }
+    }
+  ]
+}

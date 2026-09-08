@@ -1,0 +1,201 @@
+I am working on assessment 
+requirement sales person some queries and depending on data we have to answer them.
+
+Example sales person Queries:
+1. What's happening with Figma Deal ?
+2. Did we close the last deal, and what was the final amount?
+3. What happened in the last meeting, and why did the deal fail?
+4. Top 5 deals by amount in prospect
+5. What's the difference between the last 5 closed-won vs closed-lost deals — lessons to learn? 
+
+Questions 2
+What’s the latest update on the Figma Enterprise project?
+What happened in the last meeting for CRM Migration with Acme Corp?
+What was discussed in the latest email about the AI Analytics Platform?
+Which projects are currently ongoing for Brock?
+What happened in the last meeting for Marketing Automation, and why was the project closed?
+
+I'll give you some data take it and don't respond until I say done.
+
+Here please follow this
+Keep every response short, simple, clean, and to the point.
+Answer only what I asked. Nothing more.
+Don't add extra information, suggestions, warnings, alternatives, or next steps unless I ask.
+Avoid long paragraphs.
+Don't use templates or repetitive response formats.
+Don't restate my question.
+Don't use filler phrases.
+Be direct, objective, and honest.
+Don't agree with me unless I'm actually correct.
+If I'm wrong, tell me clearly and explain why.
+Challenge my assumptions when necessary.
+Double-check your reasoning before answering.
+If web research is needed for accuracy, do it before responding.
+If you're unsure, say you're unsure instead of guessing.
+If a one-line answer is enough, give only one line.
+Prefer facts and evidence over opinions.
+Don't use emojis unless I ask.
+Don't end responses with follow-up suggestions or questions unless necessary.
+
+
+
+Here there are few sales person who are handling certain set of customers,
+That sales person managing certain deals of customers end to end.
+
+
+
+Divided into 2 different problems.
+1: Storing data
+2: Responding to user query
+
+
+
+1: Storing data
+
+We are getting data from different sources with webhooks like 
+emails and calendar events from outlooks,
+Meetings transcripts from teams,
+
+
+a. Storing data in SQL db.
+Store meet data when happen, users, transcript links/email links.
+
+b. Storing data in wikis
+We have to store this data effectively in llm wikis with okf.
+Here we have one worker which collect all data and put in redis stream,
+We have data extraction agent, 
+which pull the data from stream,
+first take the data from appropriate source like transcripts, emails, calendar events.
+
+Then Text Cleaning it in python only like remove extra spaces, empty lines, remove timestamps if transcripts, remove other unwanted data if email, some metadata if calander events
+In short do cleanup as per requirement.
+
+Then we can do Noise Removal, Semantic Normalization, Vocabulary Standardization, Ambiguity Reduction, Language Normalization, Canonicalization, Requirement Consistency, Context Preservation
+
+Get data in structured format.
+What is this email/calendar_event/meeting (transcript),
+Participants,
+Customer,
+Projects,
+Salesperson involved in this,
+Summary: what is this event about,
+Data: entire clean data of meeting (transcript) or email
+
+Then store this data in some no sql db,
+
+
+Then we have another service which repeatedly take the data from the db which is changed or newly inserted and give this data to wiki generation service.
+
+wiki generation service take this data and update or create wikis and update knowledge graph
+We have to create wikis as LLM wikis with OKF. 
+If we already have wikis or md files created for certain Customer and related to salesperson.
+We have to create graph as how certain projects related to each other, how projects related to customers, how sales person related to projects and customers.
+Which sales person handling which project, 
+Projects, sales person involved, customers, people involved from customer side, data, status, last meet, last email, all the meet scheduled, all the meet happened, all the meet canceled, what happened in that meets, all info about emails, when each item added and updated
+We have to update all this things including Status and data after getting new data each time for each project.
+
+After updating all the wikis update knowledge graph.
+
+
+
+c: Creating Structure for db,
+This is one time or just when db schema updated,
+Contain all info about tables
+Each schema, table everything.
+We have to create wikis and knowledge graph for it well
+
+It should first contain root
+root has all the tables and small info about it and business use of each table and what each table is doing and what it holds
+then wiki for each table it has all info about tables short desc, 
+all columns, desc for each column and business use for each column, how this column affect this entry.
+then primary keys of this table,
+then foreign keys and their relations in detail,
+example data values max 5 for each column,
+
+Then detail graph how this tables are related to each other
+which columns are related and how they are related. 
+here also consider hop in relation upto 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Responding to user query:
+
+
+after getting user query, we get salesperson userid and it's query
+
+local cleanup:
+make text lowercase, remove spaces, remove some special chars, etc
+make check string as userid + cleaned up string,
+check this in redis for cache,
+if present just return cached response.
+
+else
+create it as job as userid of sales person and his query and put it in redis stream.
+
+There are few query optimizer worker which should listen to this.
+
+Query Optimizer
+first we have to fetch it's data from db like projects he is working on with their status (completed, ongoing, canceled) and it's role.
+then clean up user query with llm,
+
+Ex: what are the deals I closed in last weeek,
+clean up like remove filler words and normalization of counts and currencies, fix dates
+after cleanup 
+after fix: deals closed by salesperson1 (userid) from 1 sept 2026 to 7 setp 2026, - (it should do all the date and time calculations) if currency convert it to inrs, it weight convert it to pound, length to meter, speed/velocity to m/s all other conversion to SI or global units
+
+then extract data, in this agent will extract imp data from that query
+Ex: What happened in the last meeting, and why did the deal fail?
+extracted data would look like
+Que1: what happen in last meeting
+que2: why did the deal fail?
+here sequence of questions matter
+
+will create object with salesperson user id and questions in it.
+
+Protection
+Then go through each questions, give that question user data that we fetch from db to agent and ask is this person allowed to access this information that answered by this questions,
+sales preson only allow to answer his data his projects and info about his customer that he is handling 
+
+DB dependencies 
+Then go through each questions, and check for that question do we require any data from db 
+ex: what happen in last meeting: for this it easier to fetch last meet info from db,
+ex: deals closed by salesperson1 (userid) from 1 sept 2026 to 7 setp 2026: also easier to fetch all the deals by user in given time period
+if db dependency present, highlight it
+it should return just simple true of false
+and will update our object with db requirement
+
+Now if we have db requirement for any question 
+pass that question to DB agent,
+after getting data from db agent update our object and add that data in it.
+and give it to response generator
+
+DB agent:
+db agent has access to wikis for db schema.
+navigator-it should first give root and user query to llm and ask where this query belongs to which tables, it just return names of all the tables in array.
+for each table take all it's related tables to tables we got from unique, make sure tables ae unique we didn't fall in loop.
+plannar-then give all this tables and user query to llm ask to planning to generate SQL query.
+writer-then should take data from plannar and write sql query as pre requirement,
+validator-it is just python agent this is just readonly query no update, insent, delete, truncate or drop and then check if query is valid and work if not go to plannar agent with feedback.
+if valid then execute query and return data.
+
+
+response generator 
+take all the data,
+it has access to data in wikis and knowledge graph,
+depending on user query and data we have and knowledge graph create a relavant contex graph with specifide depth and breadth,
+then give that contex graph to agent and ask to select all relavant wikis
+answer each question
+then cache it in redis for ttl of 5min 
+and return response

@@ -1,0 +1,109 @@
+Tables:
+
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
+CREATE TYPE salesperson_role AS ENUM (
+    'sales_rep',
+    'senior_sales_rep',
+    'sales_manager',
+    'sales_director',
+    'admin'
+);
+
+CREATE TYPE event_type AS ENUM (
+    'calendar_event',
+    'mail',
+    'meeting'
+);
+
+CREATE TABLE salespersons (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    name VARCHAR(255) NOT NULL DEFAULT '',
+    email VARCHAR(255) NOT NULL UNIQUE,
+    projects UUID[] DEFAULT '{}',
+    role salesperson_role NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE projects (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    project_name VARCHAR(255) NOT NULL,
+    customer_name VARCHAR(255) NOT NULL,
+    salesperson UUID NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE events (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    salesperson UUID NOT NULL,
+    participants TEXT[] DEFAULT '{}',
+    customer_name VARCHAR(255),
+    project_name VARCHAR(255),
+    summary TEXT,
+    data JSONB,
+    type event_type;
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+
+
+Relationship:
+
+ALTER TABLE projects
+ADD CONSTRAINT fk_projects_salesperson
+FOREIGN KEY (salesperson)
+REFERENCES salespersons(id);
+
+ALTER TABLE events
+ADD CONSTRAINT fk_events_salesperson
+FOREIGN KEY (salesperson)
+REFERENCES salespersons(id);
+
+salespersons.projects[] contains the IDs of projects assigned to that salesperson; each ID corresponds to projects.id, creating a one-to-many relationship where one salesperson can manage multiple projects.
+
+
+
+
+Indexes:
+
+-- Salespersons
+CREATE INDEX idx_salespersons_email
+ON salespersons(email);
+
+-- Projects
+CREATE INDEX idx_projects_project_name
+ON projects(project_name);
+
+CREATE INDEX idx_projects_customer_name
+ON projects(customer_name);
+
+CREATE INDEX idx_projects_salesperson
+ON projects(salesperson);
+
+CREATE INDEX idx_projects_updated_at
+ON projects(updated_at);
+
+CREATE INDEX idx_projects_created_at
+ON projects(created_at);
+
+-- Events
+CREATE INDEX idx_events_salesperson
+ON events(salesperson);
+
+CREATE INDEX idx_events_project_name
+ON events(project_name);
+
+CREATE INDEX idx_events_customer_name
+ON events(customer_name);
+
+CREATE INDEX idx_events_updated_at
+ON events(updated_at);
+
+CREATE INDEX idx_events_created_at
+ON events(created_at);

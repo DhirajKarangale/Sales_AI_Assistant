@@ -1,0 +1,365 @@
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#Collection(microsoft.graph.callTranscript)",
+  "value": [
+    {
+      "@odata.type": "#microsoft.graph.callTranscript",
+      "id": "805801a0-50e7-40bb-9633-78a8672734a6",
+      "meetingId": "meeting-805801a0-50e7-40bb-9633-78a8672734a6",
+      "callId": "call-805801a0-50e7-40bb-9633-78a8672734a6",
+      "contentCorrelationId": "corr-805801a0-50e7-40bb-9633-78a8672734a6",
+      "createdDateTime": "2026-08-15T10:00:00Z",
+      "endDateTime": "2026-08-15T10:35:00Z",
+      "meetingOrganizer": {
+        "user": {
+          "id": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+          "displayName": "Roman",
+          "userIdentityType": "aadUser"
+        }
+      },
+      "transcriptContentUrl": "https://graph.microsoft.com/v1.0/users/ec37371f-22f8-4cec-bbd0-74d162bfe67c/onlineMeetings/meeting-805801a0-50e7-40bb-9633-78a8672734a6/transcripts/805801a0-50e7-40bb-9633-78a8672734a6/content",
+      "metadataContentUrl": "https://graph.microsoft.com/v1.0/users/ec37371f-22f8-4cec-bbd0-74d162bfe67c/onlineMeetings/meeting-805801a0-50e7-40bb-9633-78a8672734a6/transcripts/805801a0-50e7-40bb-9633-78a8672734a6/metadataContent",
+      "contentType": "text/vtt",
+      "participants": [
+        {
+          "displayName": "Alice Johnson",
+          "email": "alice.johnson@acme.com"
+        },
+        {
+          "displayName": "Mark Wilson",
+          "email": "mark.wilson@acme.com"
+        }
+      ],
+      "salesContext": {
+        "salespersonId": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+        "salespersonName": "Roman",
+        "customerName": "Acme Corp",
+        "projectName": "CRM Migration"
+      },
+      "content": "WEBVTT\n\n00:00:08.000 --> 00:00:021\n<v Roman>Hi Alice, thanks for joining. I wanted to use this session to lock down the migration scope and timeline.</v>\n\n00:00:22.000 --> 00:00:035\n<v Alice Johnson>Sure. From our side the biggest priority is moving the customer records without disrupting the sales team's daily work.</v>\n\n00:00:35.000 --> 00:00:048\n<v Mark Wilson>And we need the reporting dashboards to keep working during the transition. We don't want a gap in reporting.</v>\n\n00:00:48.000 --> 00:01:003\n<v Roman>Understood. We can run the old and new systems in parallel for the first two weeks. That gives us a rollback option.</v>\n\n00:01:04.000 --> 00:01:014\n<v Alice Johnson>That works. What do you need from our team before the first migration?</v>\n\n00:01:14.000 --> 00:01:027\n<v Roman>A cleaned export of the customer data and one person from your team to validate the migrated records.</v>\n\n00:01:27.000 --> 00:01:040\n<v Mark Wilson>I can own the validation. We also have some duplicate records that should probably be cleaned before migration.</v>\n\n00:01:41.000 --> 00:01:050\n<v Roman>Good point. We'll include a duplicate check in the preparation phase.</v>\n\n00:01:50.000 --> 00:01:058\n<v Alice Johnson>Then I'm comfortable with the timeline you sent yesterday.</v>\n\n00:01:58.000 --> 00:02:010\n<v Roman>Great. I'll send the final implementation plan and we'll start with the data preparation next Monday.</v>\n"
+    },
+    {
+      "@odata.type": "#microsoft.graph.callTranscript",
+      "id": "e36acb41-63e0-49a2-aa68-431ab7ecaffb",
+      "meetingId": "meeting-e36acb41-63e0-49a2-aa68-431ab7ecaffb",
+      "callId": "call-e36acb41-63e0-49a2-aa68-431ab7ecaffb",
+      "contentCorrelationId": "corr-e36acb41-63e0-49a2-aa68-431ab7ecaffb",
+      "createdDateTime": "2026-08-16T10:00:00Z",
+      "endDateTime": "2026-08-16T10:45:00Z",
+      "meetingOrganizer": {
+        "user": {
+          "id": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+          "displayName": "Roman",
+          "userIdentityType": "aadUser"
+        }
+      },
+      "transcriptContentUrl": "https://graph.microsoft.com/v1.0/users/ec37371f-22f8-4cec-bbd0-74d162bfe67c/onlineMeetings/meeting-e36acb41-63e0-49a2-aa68-431ab7ecaffb/transcripts/e36acb41-63e0-49a2-aa68-431ab7ecaffb/content",
+      "metadataContentUrl": "https://graph.microsoft.com/v1.0/users/ec37371f-22f8-4cec-bbd0-74d162bfe67c/onlineMeetings/meeting-e36acb41-63e0-49a2-aa68-431ab7ecaffb/transcripts/e36acb41-63e0-49a2-aa68-431ab7ecaffb/metadataContent",
+      "contentType": "text/vtt",
+      "participants": [
+        {
+          "displayName": "David Miller",
+          "email": "david.miller@technova.com"
+        },
+        {
+          "displayName": "Emily Davis",
+          "email": "emily.davis@technova.com"
+        }
+      ],
+      "salesContext": {
+        "salespersonId": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+        "salespersonName": "Roman",
+        "customerName": "TechNova",
+        "projectName": "AI Analytics Platform"
+      },
+      "content": "WEBVTT\n\n00:00:08.000 --> 00:00:022\n<v Roman>Thanks for making time. Today I'd like to get more specific about the analytics use cases and the commercial expectations.</v>\n\n00:00:23.000 --> 00:00:036\n<v David Miller>The main thing we want is a dashboard that shows revenue, customer activity, and pipeline movement in one place.</v>\n\n00:00:36.000 --> 00:00:047\n<v Emily Davis>We also need filters by region and product. Our current reports are too manual.</v>\n\n00:00:47.000 --> 00:00:058\n<v Roman>That's all supported. The question is volume. How many users do you expect initially?</v>\n\n00:00:59.000 --> 00:01:008\n<v David Miller>Around 120 users, with maybe another 80 over the next year.</v>\n\n00:01:08.000 --> 00:01:022\n<v Roman>Okay. That changes the pricing tier slightly. I can prepare a revised proposal based on 120 users and projected growth.</v>\n\n00:01:22.000 --> 00:01:033\n<v Emily Davis>Please also separate implementation from the recurring license. Procurement needs those as separate line items.</v>\n\n00:01:34.000 --> 00:01:041\n<v Roman>Absolutely. I'll make that distinction clear.</v>\n\n00:01:41.000 --> 00:01:053\n<v David Miller>If the revised pricing is reasonable, we should be able to move to the commercial review.</v>\n\n00:01:53.000 --> 00:02:004\n<v Roman>I'll send the revised proposal tomorrow and we can review it in the next meeting.</v>\n"
+    },
+    {
+      "@odata.type": "#microsoft.graph.callTranscript",
+      "id": "cb4bd374-01f4-49d8-8874-d5286f67bcca",
+      "meetingId": "meeting-cb4bd374-01f4-49d8-8874-d5286f67bcca",
+      "callId": "call-cb4bd374-01f4-49d8-8874-d5286f67bcca",
+      "contentCorrelationId": "corr-cb4bd374-01f4-49d8-8874-d5286f67bcca",
+      "createdDateTime": "2026-08-17T10:00:00Z",
+      "endDateTime": "2026-08-17T10:55:00Z",
+      "meetingOrganizer": {
+        "user": {
+          "id": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+          "displayName": "Brock",
+          "userIdentityType": "aadUser"
+        }
+      },
+      "transcriptContentUrl": "https://graph.microsoft.com/v1.0/users/710c8ecf-6340-4edf-a4e9-06513d500a59/onlineMeetings/meeting-cb4bd374-01f4-49d8-8874-d5286f67bcca/transcripts/cb4bd374-01f4-49d8-8874-d5286f67bcca/content",
+      "metadataContentUrl": "https://graph.microsoft.com/v1.0/users/710c8ecf-6340-4edf-a4e9-06513d500a59/onlineMeetings/meeting-cb4bd374-01f4-49d8-8874-d5286f67bcca/transcripts/cb4bd374-01f4-49d8-8874-d5286f67bcca/metadataContent",
+      "contentType": "text/vtt",
+      "participants": [
+        {
+          "displayName": "Sophia Moore",
+          "email": "sophia.moore@technova.com"
+        },
+        {
+          "displayName": "Michael Taylor",
+          "email": "michael.taylor@technova.com"
+        }
+      ],
+      "salesContext": {
+        "salespersonId": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+        "salespersonName": "Brock",
+        "customerName": "TechNova",
+        "projectName": "Data Warehouse"
+      },
+      "content": "WEBVTT\n\n00:00:08.000 --> 00:00:020\n<v Brock>Let's start with the migration scope. Sophia, can you walk us through the current data sources?</v>\n\n00:00:21.000 --> 00:00:031\n<v Sophia Moore>We have the CRM, billing system, support platform, and two legacy databases.</v>\n\n00:00:31.000 --> 00:00:044\n<v Michael Taylor>The legacy databases are the difficult part. Their schemas are inconsistent and there are a lot of historical records.</v>\n\n00:00:44.000 --> 00:00:053\n<v Brock>How much history do you actually need in the new warehouse?</v>\n\n00:00:54.000 --> 00:01:003\n<v Sophia Moore>Seven years for finance and three years for operational reporting.</v>\n\n00:01:03.000 --> 00:01:016\n<v Brock>That is manageable. We'll archive the older operational data rather than loading all of it into the active warehouse.</v>\n\n00:01:16.000 --> 00:01:026\n<v Michael Taylor>What about validation? We need confidence that the totals match the source systems.</v>\n\n00:01:27.000 --> 00:01:038\n<v Brock>We'll create reconciliation checks for record counts and key financial totals at every migration stage.</v>\n\n00:01:38.000 --> 00:01:047\n<v Sophia Moore>Good. Can you put those checks into the implementation plan?</v>\n\n00:01:47.000 --> 00:01:057\n<v Brock>Yes. I'll add them along with the migration phases and target dates.</v>\n"
+    },
+    {
+      "@odata.type": "#microsoft.graph.callTranscript",
+      "id": "59c807af-0036-442a-be5d-3fc8129267e3",
+      "meetingId": "meeting-59c807af-0036-442a-be5d-3fc8129267e3",
+      "callId": "call-59c807af-0036-442a-be5d-3fc8129267e3",
+      "contentCorrelationId": "corr-59c807af-0036-442a-be5d-3fc8129267e3",
+      "createdDateTime": "2026-08-18T10:00:00Z",
+      "endDateTime": "2026-08-18T10:35:00Z",
+      "meetingOrganizer": {
+        "user": {
+          "id": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+          "displayName": "Brock",
+          "userIdentityType": "aadUser"
+        }
+      },
+      "transcriptContentUrl": "https://graph.microsoft.com/v1.0/users/710c8ecf-6340-4edf-a4e9-06513d500a59/onlineMeetings/meeting-59c807af-0036-442a-be5d-3fc8129267e3/transcripts/59c807af-0036-442a-be5d-3fc8129267e3/content",
+      "metadataContentUrl": "https://graph.microsoft.com/v1.0/users/710c8ecf-6340-4edf-a4e9-06513d500a59/onlineMeetings/meeting-59c807af-0036-442a-be5d-3fc8129267e3/transcripts/59c807af-0036-442a-be5d-3fc8129267e3/metadataContent",
+      "contentType": "text/vtt",
+      "participants": [
+        {
+          "displayName": "Daniel Thomas",
+          "email": "daniel.thomas@securenet.com"
+        },
+        {
+          "displayName": "Olivia Martin",
+          "email": "olivia.martin@securenet.com"
+        }
+      ],
+      "salesContext": {
+        "salespersonId": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+        "salespersonName": "Brock",
+        "customerName": "SecureNet",
+        "projectName": "Security Platform"
+      },
+      "content": "WEBVTT\n\n00:00:08.000 --> 00:00:021\n<v Brock>Daniel, before we talk about the final proposal, I want to understand the security concerns you raised in email.</v>\n\n00:00:22.000 --> 00:00:035\n<v Daniel Thomas>The main issue is data isolation. We need confirmation that one customer can never access another customer's data.</v>\n\n00:00:35.000 --> 00:00:045\n<v Olivia Martin>We also need audit logs for administrative actions and a documented retention policy.</v>\n\n00:00:45.000 --> 00:00:055\n<v Brock>Both are supported. We can provide tenant-level isolation and immutable audit records.</v>\n\n00:00:56.000 --> 00:01:008\n<v Daniel Thomas>We need that in writing. Our security team won't approve the purchase based on a verbal confirmation.</v>\n\n00:01:08.000 --> 00:01:016\n<v Brock>That's fair. I'll send the architecture and security documentation.</v>\n\n00:01:16.000 --> 00:01:027\n<v Olivia Martin>There's also a pricing concern. The current proposal is above the budget we approved.</v>\n\n00:01:28.000 --> 00:01:039\n<v Brock>Is the budget fixed, or is there flexibility if we reduce the initial scope?</v>\n\n00:01:39.000 --> 00:01:047\n<v Daniel Thomas>The budget is effectively fixed for this year.</v>\n\n00:01:47.000 --> 00:02:000\n<v Brock>Understood. I'll see what we can do, but I don't want to promise a number before checking internally.</v>\n\n00:02:01.000 --> 00:02:013\n<v Daniel Thomas>Then let's pause the commercial decision until we have the security documents and a revised option.</v>\n\n00:02:13.000 --> 00:02:023\n<v Brock>Agreed. I'll send the documentation first and follow up with a revised proposal.</v>\n"
+    },
+    {
+      "@odata.type": "#microsoft.graph.callTranscript",
+      "id": "f6f41fbc-92b0-4b61-babb-23e27e129989",
+      "meetingId": "meeting-f6f41fbc-92b0-4b61-babb-23e27e129989",
+      "callId": "call-f6f41fbc-92b0-4b61-babb-23e27e129989",
+      "contentCorrelationId": "corr-f6f41fbc-92b0-4b61-babb-23e27e129989",
+      "createdDateTime": "2026-08-19T10:00:00Z",
+      "endDateTime": "2026-08-19T10:45:00Z",
+      "meetingOrganizer": {
+        "user": {
+          "id": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+          "displayName": "Brock",
+          "userIdentityType": "aadUser"
+        }
+      },
+      "transcriptContentUrl": "https://graph.microsoft.com/v1.0/users/710c8ecf-6340-4edf-a4e9-06513d500a59/onlineMeetings/meeting-f6f41fbc-92b0-4b61-babb-23e27e129989/transcripts/f6f41fbc-92b0-4b61-babb-23e27e129989/content",
+      "metadataContentUrl": "https://graph.microsoft.com/v1.0/users/710c8ecf-6340-4edf-a4e9-06513d500a59/onlineMeetings/meeting-f6f41fbc-92b0-4b61-babb-23e27e129989/transcripts/f6f41fbc-92b0-4b61-babb-23e27e129989/metadataContent",
+      "contentType": "text/vtt",
+      "participants": [
+        {
+          "displayName": "William Jackson",
+          "email": "william.jackson@healthplus.com"
+        },
+        {
+          "displayName": "Emma White",
+          "email": "emma.white@healthplus.com"
+        }
+      ],
+      "salesContext": {
+        "salespersonId": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+        "salespersonName": "Brock",
+        "customerName": "HealthPlus",
+        "projectName": "Customer Portal"
+      },
+      "content": "WEBVTT\n\n00:00:08.000 --> 00:00:021\n<v Brock>Thanks everyone. I want to use this meeting for the final review before we move the portal into implementation.</v>\n\n00:00:22.000 --> 00:00:033\n<v William Jackson>The latest build looks good. The login and account-management flows are working as expected.</v>\n\n00:00:33.000 --> 00:00:047\n<v Emma White>We tested the support workflow too. The only change we requested was adding a confirmation message after submitting a request.</v>\n\n00:00:47.000 --> 00:00:055\n<v Brock>That can be included without changing the delivery date.</v>\n\n00:00:56.000 --> 00:01:002\n<v William Jackson>What about the launch process?</v>\n\n00:01:02.000 --> 00:01:015\n<v Brock>We'll do a controlled rollout first, monitor errors for 24 hours, and then open it to all users.</v>\n\n00:01:15.000 --> 00:01:024\n<v Emma White>That sounds reasonable. Do you need anything else from us?</v>\n\n00:01:25.000 --> 00:01:035\n<v Brock>Just the final list of production users and the support escalation contacts.</v>\n\n00:01:35.000 --> 00:01:041\n<v William Jackson>We'll send those today.</v>\n\n00:01:41.000 --> 00:01:051\n<v Brock>Perfect. Once we have those, I'll mark the project ready for implementation.</v>\n"
+    },
+    {
+      "@odata.type": "#microsoft.graph.callTranscript",
+      "id": "52d4d1db-8182-475f-b298-a60de8694d1d",
+      "meetingId": "meeting-52d4d1db-8182-475f-b298-a60de8694d1d",
+      "callId": "call-52d4d1db-8182-475f-b298-a60de8694d1d",
+      "contentCorrelationId": "corr-52d4d1db-8182-475f-b298-a60de8694d1d",
+      "createdDateTime": "2026-08-20T10:00:00Z",
+      "endDateTime": "2026-08-20T10:55:00Z",
+      "meetingOrganizer": {
+        "user": {
+          "id": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+          "displayName": "Steve",
+          "userIdentityType": "aadUser"
+        }
+      },
+      "transcriptContentUrl": "https://graph.microsoft.com/v1.0/users/f52f2cff-2e14-4da5-9c85-3f8114d0d5d6/onlineMeetings/meeting-52d4d1db-8182-475f-b298-a60de8694d1d/transcripts/52d4d1db-8182-475f-b298-a60de8694d1d/content",
+      "metadataContentUrl": "https://graph.microsoft.com/v1.0/users/f52f2cff-2e14-4da5-9c85-3f8114d0d5d6/onlineMeetings/meeting-52d4d1db-8182-475f-b298-a60de8694d1d/transcripts/52d4d1db-8182-475f-b298-a60de8694d1d/metadataContent",
+      "contentType": "text/vtt",
+      "participants": [
+        {
+          "displayName": "Charlotte Lee",
+          "email": "charlotte.lee@payflow.com"
+        },
+        {
+          "displayName": "Henry Lewis",
+          "email": "henry.lewis@payflow.com"
+        }
+      ],
+      "salesContext": {
+        "salespersonId": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+        "salespersonName": "Steve",
+        "customerName": "PayFlow",
+        "projectName": "Payment Gateway"
+      },
+      "content": "WEBVTT\n\n00:00:08.000 --> 00:00:018\n<v Steve>Charlotte, I'd like to focus today on transaction volume and the commercial terms.</v>\n\n00:00:19.000 --> 00:00:028\n<v Charlotte Lee>Our expected volume is around 1.5 million transactions per month initially.</v>\n\n00:00:28.000 --> 00:00:037\n<v Henry Lewis>And we'd like the pricing to step down as volume increases.</v>\n\n00:00:37.000 --> 00:00:047\n<v Steve>We can structure volume-based pricing. I need to confirm the exact thresholds internally.</v>\n\n00:00:48.000 --> 00:00:056\n<v Charlotte Lee>Our finance team also wants net-45 payment terms.</v>\n\n00:00:56.000 --> 00:01:006\n<v Steve>Our standard is net-30, but I can take net-45 back for approval.</v>\n\n00:01:06.000 --> 00:01:017\n<v Henry Lewis>If both of those are workable, the technical side is already in good shape.</v>\n\n00:01:18.000 --> 00:01:029\n<v Steve>That's helpful. I'll separate the pricing tiers and payment terms in the revised proposal.</v>\n\n00:01:29.000 --> 00:01:037\n<v Charlotte Lee>Good. Let's target the commercial review for next week.</v>\n\n00:01:37.000 --> 00:01:045\n<v Steve>Agreed. I'll send the updated proposal before then.</v>\n"
+    },
+    {
+      "@odata.type": "#microsoft.graph.callTranscript",
+      "id": "599bd610-1117-4a4e-8fd2-e80036c18ad5",
+      "meetingId": "meeting-599bd610-1117-4a4e-8fd2-e80036c18ad5",
+      "callId": "call-599bd610-1117-4a4e-8fd2-e80036c18ad5",
+      "contentCorrelationId": "corr-599bd610-1117-4a4e-8fd2-e80036c18ad5",
+      "createdDateTime": "2026-08-21T10:00:00Z",
+      "endDateTime": "2026-08-21T10:35:00Z",
+      "meetingOrganizer": {
+        "user": {
+          "id": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+          "displayName": "Steve",
+          "userIdentityType": "aadUser"
+        }
+      },
+      "transcriptContentUrl": "https://graph.microsoft.com/v1.0/users/f52f2cff-2e14-4da5-9c85-3f8114d0d5d6/onlineMeetings/meeting-599bd610-1117-4a4e-8fd2-e80036c18ad5/transcripts/599bd610-1117-4a4e-8fd2-e80036c18ad5/content",
+      "metadataContentUrl": "https://graph.microsoft.com/v1.0/users/f52f2cff-2e14-4da5-9c85-3f8114d0d5d6/onlineMeetings/meeting-599bd610-1117-4a4e-8fd2-e80036c18ad5/transcripts/599bd610-1117-4a4e-8fd2-e80036c18ad5/metadataContent",
+      "contentType": "text/vtt",
+      "participants": [
+        {
+          "displayName": "Amelia Hall",
+          "email": "amelia.hall@travelease.com"
+        },
+        {
+          "displayName": "Alexander Walker",
+          "email": "alexander.walker@travelease.com"
+        }
+      ],
+      "salesContext": {
+        "salespersonId": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+        "salespersonName": "Steve",
+        "customerName": "TravelEase",
+        "projectName": "Mobile App"
+      },
+      "content": "WEBVTT\n\n00:00:08.000 --> 00:00:018\n<v Steve>Thanks for joining. Today is the final scope review for the mobile application.</v>\n\n00:00:19.000 --> 00:00:029\n<v Amelia Hall>We reviewed the latest build and the core booking flow is correct.</v>\n\n00:00:29.000 --> 00:00:041\n<v Alexander Walker>We also tested notifications. There was one issue with delayed push notifications, but it appears fixed.</v>\n\n00:00:41.000 --> 00:00:049\n<v Steve>Good. Are there any remaining blockers from your side?</v>\n\n00:00:50.000 --> 00:01:000\n<v Amelia Hall>No blockers. We'd like analytics events for booking, cancellation, and payment confirmation.</v>\n\n00:01:00.000 --> 00:01:008\n<v Steve>Those events are already in the implementation plan.</v>\n\n00:01:08.000 --> 00:01:014\n<v Alexander Walker>What is the deployment sequence?</v>\n\n00:01:15.000 --> 00:01:028\n<v Steve>We'll deploy to the internal test group first, then a small percentage of production users, and expand after monitoring.</v>\n\n00:01:28.000 --> 00:01:034\n<v Amelia Hall>That works for us.</v>\n\n00:01:34.000 --> 00:01:044\n<v Steve>Great. I'll mark the scope as approved and send the deployment checklist.</v>\n"
+    },
+    {
+      "@odata.type": "#microsoft.graph.callTranscript",
+      "id": "669d2f94-5f06-4eb7-842e-d78ab61c65b5",
+      "meetingId": "meeting-669d2f94-5f06-4eb7-842e-d78ab61c65b5",
+      "callId": "call-669d2f94-5f06-4eb7-842e-d78ab61c65b5",
+      "contentCorrelationId": "corr-669d2f94-5f06-4eb7-842e-d78ab61c65b5",
+      "createdDateTime": "2026-08-22T10:00:00Z",
+      "endDateTime": "2026-08-22T10:45:00Z",
+      "meetingOrganizer": {
+        "user": {
+          "id": "09cfdc46-a939-4899-8a40-17cda3f97786",
+          "displayName": "Kurt",
+          "userIdentityType": "aadUser"
+        }
+      },
+      "transcriptContentUrl": "https://graph.microsoft.com/v1.0/users/09cfdc46-a939-4899-8a40-17cda3f97786/onlineMeetings/meeting-669d2f94-5f06-4eb7-842e-d78ab61c65b5/transcripts/669d2f94-5f06-4eb7-842e-d78ab61c65b5/content",
+      "metadataContentUrl": "https://graph.microsoft.com/v1.0/users/09cfdc46-a939-4899-8a40-17cda3f97786/onlineMeetings/meeting-669d2f94-5f06-4eb7-842e-d78ab61c65b5/transcripts/669d2f94-5f06-4eb7-842e-d78ab61c65b5/metadataContent",
+      "contentType": "text/vtt",
+      "participants": [
+        {
+          "displayName": "Harper Young",
+          "email": "harper.young@figma.com"
+        },
+        {
+          "displayName": "Matthew Allen",
+          "email": "matthew.allen@figma.com"
+        }
+      ],
+      "salesContext": {
+        "salespersonId": "09cfdc46-a939-4899-8a40-17cda3f97786",
+        "salespersonName": "Kurt",
+        "customerName": "Figma",
+        "projectName": "Figma Enterprise"
+      },
+      "content": "WEBVTT\n\n00:00:08.000 --> 00:00:019\n<v Kurt>Harper, thanks for joining. I want to close the remaining questions around enterprise licensing.</v>\n\n00:00:20.000 --> 00:00:032\n<v Harper Young>The functionality looks right. The open question is the annual price at our expected user count.</v>\n\n00:00:32.000 --> 00:00:042\n<v Matthew Allen>We also need the enterprise security terms reviewed by our legal team.</v>\n\n00:00:42.000 --> 00:00:055\n<v Kurt>We can provide the security documentation today. For pricing, what user count should I use for the final proposal?</v>\n\n00:00:56.000 --> 00:01:007\n<v Harper Young>Around 600 users initially, with a possibility of 900 by the end of the year.</v>\n\n00:01:07.000 --> 00:01:018\n<v Kurt>Okay. I'll price the initial commitment at 600 and include the expansion tier separately.</v>\n\n00:01:18.000 --> 00:01:025\n<v Matthew Allen>That would help procurement compare the options.</v>\n\n00:01:26.000 --> 00:01:036\n<v Kurt>I'll also include the implementation and support costs as separate line items.</v>\n\n00:01:36.000 --> 00:01:047\n<v Harper Young>Good. If the numbers are within our range, we can move to legal review.</v>\n\n00:01:47.000 --> 00:01:054\n<v Kurt>I'll send the final commercial proposal tomorrow.</v>\n"
+    },
+    {
+      "@odata.type": "#microsoft.graph.callTranscript",
+      "id": "fc35fac2-2066-4481-891f-74c6411c0efe",
+      "meetingId": "meeting-fc35fac2-2066-4481-891f-74c6411c0efe",
+      "callId": "call-fc35fac2-2066-4481-891f-74c6411c0efe",
+      "contentCorrelationId": "corr-fc35fac2-2066-4481-891f-74c6411c0efe",
+      "createdDateTime": "2026-08-23T10:00:00Z",
+      "endDateTime": "2026-08-23T10:55:00Z",
+      "meetingOrganizer": {
+        "user": {
+          "id": "09cfdc46-a939-4899-8a40-17cda3f97786",
+          "displayName": "Kurt",
+          "userIdentityType": "aadUser"
+        }
+      },
+      "transcriptContentUrl": "https://graph.microsoft.com/v1.0/users/09cfdc46-a939-4899-8a40-17cda3f97786/onlineMeetings/meeting-fc35fac2-2066-4481-891f-74c6411c0efe/transcripts/fc35fac2-2066-4481-891f-74c6411c0efe/content",
+      "metadataContentUrl": "https://graph.microsoft.com/v1.0/users/09cfdc46-a939-4899-8a40-17cda3f97786/onlineMeetings/meeting-fc35fac2-2066-4481-891f-74c6411c0efe/transcripts/fc35fac2-2066-4481-891f-74c6411c0efe/metadataContent",
+      "contentType": "text/vtt",
+      "participants": [
+        {
+          "displayName": "Evelyn Wright",
+          "email": "evelyn.wright@acme.com"
+        },
+        {
+          "displayName": "Ethan King",
+          "email": "ethan.king@acme.com"
+        }
+      ],
+      "salesContext": {
+        "salespersonId": "09cfdc46-a939-4899-8a40-17cda3f97786",
+        "salespersonName": "Kurt",
+        "customerName": "Acme Corp",
+        "projectName": "Marketing Automation"
+      },
+      "content": "WEBVTT\n\n00:00:08.000 --> 00:00:018\n<v Kurt>Evelyn, I'd like to understand the decision before we close the opportunity.</v>\n\n00:00:19.000 --> 00:00:031\n<v Evelyn Wright>The product itself was well received. The issue is the expected return compared with the implementation cost.</v>\n\n00:00:31.000 --> 00:00:043\n<v Ethan King>We ran the numbers again after the proposal. We don't think the first-year savings justify the investment.</v>\n\n00:00:43.000 --> 00:00:051\n<v Kurt>Would reducing the initial scope change that calculation?</v>\n\n00:00:52.000 --> 00:01:000\n<v Evelyn Wright>Possibly, but we'd still have the internal change-management cost.</v>\n\n00:01:00.000 --> 00:01:010\n<v Kurt>Understood. If we proposed a smaller pilot, would that be something you'd consider?</v>\n\n00:01:10.000 --> 00:01:020\n<v Evelyn Wright>Not right now. We have another initiative competing for the same budget.</v>\n\n00:01:21.000 --> 00:01:028\n<v Ethan King>We'd rather revisit this next planning cycle.</v>\n\n00:01:28.000 --> 00:01:041\n<v Kurt>That's clear. I'll record the opportunity as closed and note that budget allocation and ROI were the main reasons.</v>\n\n00:01:41.000 --> 00:01:047\n<v Evelyn Wright>That accurately reflects our decision.</v>\n"
+    },
+    {
+      "@odata.type": "#microsoft.graph.callTranscript",
+      "id": "468da382-21d1-4625-bbc3-01f2cfbb1155",
+      "meetingId": "meeting-468da382-21d1-4625-bbc3-01f2cfbb1155",
+      "callId": "call-468da382-21d1-4625-bbc3-01f2cfbb1155",
+      "contentCorrelationId": "corr-468da382-21d1-4625-bbc3-01f2cfbb1155",
+      "createdDateTime": "2026-08-24T10:00:00Z",
+      "endDateTime": "2026-08-24T10:35:00Z",
+      "meetingOrganizer": {
+        "user": {
+          "id": "99ff091f-bf2c-429d-a556-22f59525412f",
+          "displayName": "John",
+          "userIdentityType": "aadUser"
+        }
+      },
+      "transcriptContentUrl": "https://graph.microsoft.com/v1.0/users/99ff091f-bf2c-429d-a556-22f59525412f/onlineMeetings/meeting-468da382-21d1-4625-bbc3-01f2cfbb1155/transcripts/468da382-21d1-4625-bbc3-01f2cfbb1155/content",
+      "metadataContentUrl": "https://graph.microsoft.com/v1.0/users/99ff091f-bf2c-429d-a556-22f59525412f/onlineMeetings/meeting-468da382-21d1-4625-bbc3-01f2cfbb1155/transcripts/468da382-21d1-4625-bbc3-01f2cfbb1155/metadataContent",
+      "contentType": "text/vtt",
+      "participants": [
+        {
+          "displayName": "Grace Hill",
+          "email": "grace.hill@peoplefirst.com"
+        },
+        {
+          "displayName": "Logan Nelson",
+          "email": "logan.nelson@peoplefirst.com"
+        }
+      ],
+      "salesContext": {
+        "salespersonId": "99ff091f-bf2c-429d-a556-22f59525412f",
+        "salespersonName": "John",
+        "customerName": "PeopleFirst",
+        "projectName": "AI Support Platform"
+      },
+      "content": "WEBVTT\n\n00:00:08.000 --> 00:00:021\n<v John>Grace, I'll start with a quick overview and then we can focus on the workflows that matter to PeopleFirst.</v>\n\n00:00:22.000 --> 00:00:034\n<v Grace Hill>The biggest issue for us is repetitive HR support questions. Employees ask the same things constantly.</v>\n\n00:00:34.000 --> 00:00:045\n<v Logan Nelson>We'd like the assistant to answer those questions but escalate anything involving sensitive employee information.</v>\n\n00:00:45.000 --> 00:00:056\n<v John>That's a good fit. We can define escalation rules based on topic and confidence.</v>\n\n00:00:57.000 --> 00:01:009\n<v Grace Hill>Can it also surface the source of the answer? Our HR team needs to verify policy responses.</v>\n\n00:01:09.000 --> 00:01:018\n<v John>Yes. We can include the source document with each response.</v>\n\n00:01:18.000 --> 00:01:026\n<v Logan Nelson>What about integration with our existing ticketing system?</v>\n\n00:01:27.000 --> 00:01:040\n<v John>We have an API integration for that. Tickets can be created automatically when the assistant escalates a case.</v>\n\n00:01:40.000 --> 00:01:049\n<v Grace Hill>That covers our main requirements. We'd like a technical demo next.</v>\n\n00:01:49.000 --> 00:01:058\n<v John>I'll schedule the demo and include the ticketing and escalation workflows.</v>\n"
+    }
+  ]
+}

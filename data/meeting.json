@@ -1,0 +1,111 @@
+[{
+  "id": "805801a0-50e7-40bb-9633-78a8672734a6",
+  "salesperson": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+  "participants": "{\"Alice Johnson\",\"Mark Wilson\"}",
+  "customer_name": "Acme Corp",
+  "project_name": "CRM Migration",
+  "summary": null,
+  "data": null,
+  "created_at": "2026-09-08 17:47:04.826774+00",
+  "updated_at": "2026-09-08 17:47:04.826774+00",
+  "type": "meeting"
+}, {
+  "id": "e36acb41-63e0-49a2-aa68-431ab7ecaffb",
+  "salesperson": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+  "participants": "{\"David Miller\",\"Emily Davis\"}",
+  "customer_name": "TechNova",
+  "project_name": "AI Analytics Platform",
+  "summary": null,
+  "data": null,
+  "created_at": "2026-09-08 17:47:04.826774+00",
+  "updated_at": "2026-09-08 17:47:04.826774+00",
+  "type": "meeting"
+}, {
+  "id": "cb4bd374-01f4-49d8-8874-d5286f67bcca",
+  "salesperson": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+  "participants": "{\"Sophia Moore\",\"Michael Taylor\"}",
+  "customer_name": "TechNova",
+  "project_name": "Data Warehouse",
+  "summary": null,
+  "data": null,
+  "created_at": "2026-09-08 17:47:04.826774+00",
+  "updated_at": "2026-09-08 17:47:04.826774+00",
+  "type": "meeting"
+}, {
+  "id": "59c807af-0036-442a-be5d-3fc8129267e3",
+  "salesperson": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+  "participants": "{\"Daniel Thomas\",\"Olivia Martin\"}",
+  "customer_name": "SecureNet",
+  "project_name": "Security Platform",
+  "summary": null,
+  "data": null,
+  "created_at": "2026-09-08 17:47:04.826774+00",
+  "updated_at": "2026-09-08 17:47:04.826774+00",
+  "type": "meeting"
+}, {
+  "id": "f6f41fbc-92b0-4b61-babb-23e27e129989",
+  "salesperson": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+  "participants": "{\"William Jackson\",\"Emma White\"}",
+  "customer_name": "HealthPlus",
+  "project_name": "Customer Portal",
+  "summary": null,
+  "data": null,
+  "created_at": "2026-09-08 17:47:04.826774+00",
+  "updated_at": "2026-09-08 17:47:04.826774+00",
+  "type": "meeting"
+}, {
+  "id": "52d4d1db-8182-475f-b298-a60de8694d1d",
+  "salesperson": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+  "participants": "{\"Charlotte Lee\",\"Henry Lewis\"}",
+  "customer_name": "PayFlow",
+  "project_name": "Payment Gateway",
+  "summary": null,
+  "data": null,
+  "created_at": "2026-09-08 17:47:04.826774+00",
+  "updated_at": "2026-09-08 17:47:04.826774+00",
+  "type": "meeting"
+}, {
+  "id": "599bd610-1117-4a4e-8fd2-e80036c18ad5",
+  "salesperson": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+  "participants": "{\"Amelia Hall\",\"Alexander Walker\"}",
+  "customer_name": "TravelEase",
+  "project_name": "Mobile App",
+  "summary": null,
+  "data": null,
+  "created_at": "2026-09-08 17:47:04.826774+00",
+  "updated_at": "2026-09-08 17:47:04.826774+00",
+  "type": "meeting"
+}, {
+  "id": "669d2f94-5f06-4eb7-842e-d78ab61c65b5",
+  "salesperson": "09cfdc46-a939-4899-8a40-17cda3f97786",
+  "participants": "{\"Harper Young\",\"Matthew Allen\"}",
+  "customer_name": "Figma",
+  "project_name": "Figma Enterprise",
+  "summary": null,
+  "data": null,
+  "created_at": "2026-09-08 17:47:04.826774+00",
+  "updated_at": "2026-09-08 17:47:04.826774+00",
+  "type": "meeting"
+}, {
+  "id": "fc35fac2-2066-4481-891f-74c6411c0efe",
+  "salesperson": "09cfdc46-a939-4899-8a40-17cda3f97786",
+  "participants": "{\"Evelyn Wright\",\"Ethan King\"}",
+  "customer_name": "Acme Corp",
+  "project_name": "Marketing Automation",
+  "summary": null,
+  "data": null,
+  "created_at": "2026-09-08 17:47:04.826774+00",
+  "updated_at": "2026-09-08 17:47:04.826774+00",
+  "type": "meeting"
+}, {
+  "id": "468da382-21d1-4625-bbc3-01f2cfbb1155",
+  "salesperson": "99ff091f-bf2c-429d-a556-22f59525412f",
+  "participants": "{\"Grace Hill\",\"Logan Nelson\"}",
+  "customer_name": "PeopleFirst",
+  "project_name": "AI Support Platform",
+  "summary": null,
+  "data": null,
+  "created_at": "2026-09-08 17:47:04.826774+00",
+  "updated_at": "2026-09-08 17:47:04.826774+00",
+  "type": "meeting"
+}]
