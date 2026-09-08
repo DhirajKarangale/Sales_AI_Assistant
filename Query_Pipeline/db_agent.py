@@ -118,12 +118,13 @@ def _expand_relationships(tables: list[str]) -> dict:
 
     # Expand: for each selected table, add directly related tables (1-hop)
     expanded = set(tables)
+    initial_tables = set(tables)
     for rel in relationships:
         src = rel["source_table"]
         tgt = rel["target_table"]
-        if src in expanded and tgt in KNOWN_TABLES:
+        if src in initial_tables and tgt in KNOWN_TABLES:
             expanded.add(tgt)
-        if tgt in expanded and src in KNOWN_TABLES:
+        if tgt in initial_tables and src in KNOWN_TABLES:
             expanded.add(src)
 
     # Filter relevant relationships (both endpoints in expanded set)
@@ -281,21 +282,26 @@ def _validate_sql(sql: str, expanded_tables: list[str], table_schemas: dict) -> 
     if not clean_sql.startswith("SELECT") and not clean_sql.startswith("WITH"):
         feedback_items.append("REJECTED: SQL must start with SELECT or WITH (CTE). Found something else.")
 
-    # 3. Check for multiple statements
-    # Split by semicolons (excluding those within strings)
-    statements = [s.strip() for s in sql.rstrip(";").split(";") if s.strip()]
+    # 3. Check for multiple statements safely (ignoring semicolons inside single quotes)
+    sql_no_strings = re.sub(r"'[^']*'", "''", sql)
+    statements = [s.strip() for s in sql_no_strings.rstrip(";").split(";") if s.strip()]
     if len(statements) > 1:
         feedback_items.append("REJECTED: Multiple SQL statements detected. Only a single SELECT statement is allowed.")
 
-    # 4. Validate table references
-    # Extract table names from FROM and JOIN clauses
+    # 4. Validate table references and extract aliases
     table_refs = set()
-    # Match FROM/JOIN table patterns (handles aliases)
+    alias_map = {}
+    
+    # Match FROM/JOIN table AS alias or FROM/JOIN table alias
     from_join_pattern = re.compile(
-        r"(?:FROM|JOIN)\s+(\w+)", re.IGNORECASE
+        r"(?:FROM|JOIN)\s+([a-zA-Z0-9_]+)(?:\s+(?:AS\s+)?([a-zA-Z0-9_]+))?", re.IGNORECASE
     )
-    for match in from_join_pattern.finditer(sql):
-        table_refs.add(match.group(1).lower())
+    for match in from_join_pattern.finditer(sql_no_strings):
+        table_name = match.group(1).lower()
+        table_refs.add(table_name)
+        alias = match.group(2)
+        if alias and alias.upper() not in ("ON", "WHERE", "GROUP", "ORDER", "HAVING", "LIMIT", "LEFT", "RIGHT", "INNER", "OUTER", "CROSS", "JOIN"):
+            alias_map[alias.lower()] = table_name
 
     for table in table_refs:
         if table not in KNOWN_TABLES:
@@ -305,17 +311,20 @@ def _validate_sql(sql: str, expanded_tables: list[str], table_schemas: dict) -> 
             )
 
     # 5. Validate column references (table.column format)
-    col_ref_pattern = re.compile(r"(\w+)\.(\w+)")
-    for match in col_ref_pattern.finditer(sql):
+    col_ref_pattern = re.compile(r"([a-zA-Z0-9_]+)\.([a-zA-Z0-9_]+)")
+    for match in col_ref_pattern.finditer(sql_no_strings):
         table_or_alias = match.group(1).lower()
         column = match.group(2).lower()
 
-        # Only validate if the table part matches a known table name
-        if table_or_alias in KNOWN_COLUMNS:
-            if column not in KNOWN_COLUMNS[table_or_alias]:
+        # Resolve alias to actual table name if it exists
+        actual_table = alias_map.get(table_or_alias, table_or_alias)
+
+        # Validate if it maps to a known table
+        if actual_table in KNOWN_COLUMNS:
+            if column not in KNOWN_COLUMNS[actual_table]:
                 feedback_items.append(
-                    f"INVALID COLUMN: '{table_or_alias}.{column}' does not exist. "
-                    f"Valid columns for '{table_or_alias}': {', '.join(sorted(KNOWN_COLUMNS[table_or_alias]))}."
+                    f"INVALID COLUMN: '{table_or_alias}.{column}' (resolved to '{actual_table}.{column}'). "
+                    f"Valid columns for '{actual_table}': {', '.join(sorted(KNOWN_COLUMNS[actual_table]))}."
                 )
 
     if feedback_items:
