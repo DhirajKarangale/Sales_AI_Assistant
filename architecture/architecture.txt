@@ -20,6 +20,10 @@ What was discussed in the latest email about the AI Analytics Platform?
 Which projects are currently ongoing for Brock?
 What happened in the last meeting for Marketing Automation, and why was the project closed?
 
+Divided into 2 different problems.
+1: Storing data
+2: Responding to user query
+
 I'll give you some data take it and don't respond until I say done.
 
 Here please follow this
@@ -41,12 +45,6 @@ If a one-line answer is enough, give only one line.
 Prefer facts and evidence over opinions.
 Don't use emojis unless I ask.
 Don't end responses with follow-up suggestions or questions unless necessary.
-
-
-
-Divided into 2 different problems.
-1: Storing data
-2: Responding to user query
 
 
 
@@ -118,18 +116,7 @@ here also consider hop in relation upto 4
 
 
 
-
-
-
-
-
-
-
-
-
-
 2. Responding to user query:
-
 
 after getting user query, we get salesperson userid and it's query
 
