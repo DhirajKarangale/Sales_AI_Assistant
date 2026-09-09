@@ -1,24 +1,14 @@
-Example sales person Queries:
-1. What's happening with Figma Deal ?
-2. Did we close the last deal, and what was the final amount?
-3. What happened in the last meeting, and why did the deal fail?
-4. Top 5 deals by amount in prospect
-5. What's the difference between the last 5 closed-won vs closed-lost deals — lessons to learn? 
-
-
-
-
 I am working on assessment 
 requirement sales person some queries and depending on data we have to answer them.
 Here there are few sales person who are handling certain set of customers,
 That sales person managing certain deals of customers end to end.
 
 Example sales person Queries:
-What’s the latest update on the Figma Enterprise project?
-What happened in the last meeting for CRM Migration with Acme Corp?
-What was discussed in the latest email about the AI Analytics Platform?
-Which projects are currently ongoing for Brock?
-What happened in the last meeting for Marketing Automation, and why was the project closed?
+I'm prepping for a call with Acme Corp. Can you summarize our last meeting about the CRM Migration and tell me who was on it?
+What's the current status of the Data Warehouse deal? When was the last time we actually had a touchpoint with them?
+Did anyone ever reply to my email regarding the implementation timeline for the ERP Integration?
+Pull up the latest emails and meeting notes for the Marketing Automation project so I can get up to speed on where we left off.
+Can you give me a quick rundown of all the active accounts I am handling right now?
 
 Divided into 2 different problems.
 1: Storing data
