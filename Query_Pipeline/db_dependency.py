@@ -5,7 +5,7 @@ project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
-from utils.huggingface import invoke_llm
+from utils.llm import invoke_llm
 
 # Lightweight models for simple boolean classification
 DEPENDENCY_MODELS = ["llama3_1_8b", "phi3_mini", "qwen2_5_7b"]
@@ -60,10 +60,15 @@ Respond with ONLY valid JSON in this exact format:
         # Update questions with the dependency flags
         updated_questions = []
         for q in questions:
-            needs_db = dependency_map.get(q["index"], True)  # Default to True if missing
+            # needs_db = dependency_map.get(q["index"], True)  # Default to True if missing
+            needs_db = False # TEMPORARY: Hardcoded to False to skip DBAgent for testing
             q_copy = dict(q)
             q_copy["needs_db"] = bool(needs_db)
             updated_questions.append(q_copy)
+            
+            # Added logs for db dependency
+            status = "YES" if needs_db else "NO"
+            print(f"  - Q{q['index']} needs DB? {status}")
 
         return {"questions": updated_questions}
 

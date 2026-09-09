@@ -6,7 +6,7 @@ project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(_
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
-from utils.huggingface import invoke_llm
+from utils.llm import invoke_llm
 
 # Generation Models (Strong logic, structures)
 GEN_MODELS = [

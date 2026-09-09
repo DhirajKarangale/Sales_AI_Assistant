@@ -8,7 +8,7 @@ if project_root not in sys.path:
 
 from psycopg2.extras import RealDictCursor
 from utils.db import init_db
-from utils.huggingface import invoke_llm
+from utils.llm import invoke_llm
 from Query_Pipeline.kb_loader import (
     load_db_root_wiki,
     load_db_knowledge_graph,

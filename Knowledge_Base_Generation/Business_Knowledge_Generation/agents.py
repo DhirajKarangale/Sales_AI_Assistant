@@ -3,7 +3,7 @@ import sys
 import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-from utils.huggingface import invoke_llm
+from utils.llm import invoke_llm
 
 def extractor_agent(raw_event: dict, cleaned_data: str, feedback: str = None) -> dict:
     models = ["llama3_3_70b", "deepseek_v3", "qwen2_5_72b"]

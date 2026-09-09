@@ -22,9 +22,12 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 from Query_Pipeline.workflow import run_pipeline
-
+from utils.ollama import start_connection
 
 def main():
+    # Initialize the LLM connection before executing pipeline
+    start_connection()
+    
     # --- Test Queries ---
     TEST_QUERIES = [
         {
@@ -55,7 +58,7 @@ def main():
     ]
 
     # Select the query to run (0 to 4)
-    selected = TEST_QUERIES[0]
+    selected = TEST_QUERIES[1]
     SALESPERSON_ID = selected["salesperson_id"]
     USER_QUERY = selected["query"]
 
