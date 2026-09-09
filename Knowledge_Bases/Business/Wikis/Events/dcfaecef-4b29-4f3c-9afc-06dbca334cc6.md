@@ -7,6 +7,9 @@ project: DevOps Transformation
 salesperson: Kurt
 ---
 
+Created At: 2026-09-08T17:46:02.92832Z
+Updated At: 2026-09-08T17:46:02.92832Z
+
 # Event: dcfaecef-4b29-4f3c-9afc-06dbca334cc6
 
 **Summary**: DevOps Transformation Planning

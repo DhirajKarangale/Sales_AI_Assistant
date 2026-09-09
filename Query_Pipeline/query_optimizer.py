@@ -149,7 +149,8 @@ Rules:
 3. If the query is already a single question, return it as a single-item list.
 4. Each question should be self-contained and answerable independently.
 5. DO NOT invent questions that are not present in the query.
-6. Include relevant context (like salesperson ID, project names, dates) in each question so it can stand alone.
+6. If a query mentions a specific project, customer, or context (e.g., 'AI Analytics Platform'), that context MUST be explicitly carried over into ALL sub-questions unless a different project is specified. Do not drop project or salesperson context.
+7. Include relevant context (like salesperson ID, project names, dates) in each question so it can stand alone.
 
 Salesperson context:
 - Name: {salesperson_info['name']}

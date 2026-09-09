@@ -132,12 +132,18 @@ def invoke_llm(model_names: list[str], prompt: str, parse_as_json: bool = False)
                             )
                         break
                     else:
+                        if "400" in error_msg or "bad request" in error_msg or "404" in error_msg or "not found" in error_msg or "422" in error_msg:
+                            print(f"[HuggingFace] Client error for model {model_name} (e.g. 400/404). Skipping model.")
+                            attempts_with_different_tokens = len(HF_TOKENS)
+                            break
+
                         network_retries += 1
                         if network_retries < 3:
                             delay = 2 ** network_retries
                             time.sleep(delay)
                         else:
-                            attempts_with_different_tokens += 1
+                            print(f"[HuggingFace] Network retries exhausted for model {model_name}. Skipping model.")
+                            attempts_with_different_tokens = len(HF_TOKENS)
                             break
 
     if len(_exhausted_token_indices) >= len(HF_TOKENS):

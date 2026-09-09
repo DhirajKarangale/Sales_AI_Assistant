@@ -251,7 +251,16 @@ RULES:
 5. Clearly distinguish between what is known (from data) and what is unavailable.
 6. Be concise but thorough.
 7. Use specific data points (dates, names, statuses) from the results where available.
-8. Format the response clearly — use bullet points or numbered lists where appropriate.
+8. Structure your response EXACTLY like this:
+
+Q1: [Question 1 Text]
+* [Answer for Q1]
+
+Q2: [Question 2 Text]
+* [Answer for Q2]
+
+Final Combined Result:
+* [Concisely combine the answers to all questions into ONE coherent summary]
 
 Provide your complete response now:"""
 

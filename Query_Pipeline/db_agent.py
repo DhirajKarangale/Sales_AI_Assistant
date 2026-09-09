@@ -194,6 +194,9 @@ Rules:
 5. Consider the column data types carefully (UUID, TIMESTAMPTZ, VARCHAR, JSONB, ARRAY, ENUM).
 6. Be specific about which columns to select, what conditions to apply, and what ordering/limits to use.
 7. For ENUM types: salesperson_role values are 'sales_rep', 'senior_sales_rep', 'sales_manager', 'sales_director', 'admin'. event_type values are 'calendar_event', 'mail', 'meeting'.
+8. VERY IMPORTANT: To find when an event or meeting happened, query the `created_at` column as the date field. There is no other date field.
+9. VERY IMPORTANT: When searching for "meetings", make sure to filter the `type` column to include 'calendar_event' or 'meeting'.
+10. ALWAYS filter by `project_name` if a project is mentioned in the query.
 """
 
     if validation_feedback:

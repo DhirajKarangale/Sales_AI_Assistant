@@ -110,11 +110,6 @@ def run_pipeline(salesperson_id: str, query: str) -> str:
     Returns:
         The final response string, or an error message.
     """
-    print("=" * 70)
-    print("QUERY PIPELINE — START")
-    print(f"  Salesperson ID: {salesperson_id}")
-    print(f"  Query: {query}")
-    print("=" * 70)
 
     app = get_workflow()
 
