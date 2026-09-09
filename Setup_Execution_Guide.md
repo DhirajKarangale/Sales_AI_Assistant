@@ -1,6 +1,12 @@
 # Sales AI Assistant — Setup & Execution Guide
 
-## 1. LLM Setup: HuggingFace vs. Ollama
+## 1. Install Dependencies
+Before running the system, install all the required Python packages from the newly created `requirements.txt` file:
+```bash
+pip install -r requirements.txt
+```
+
+## 2. LLM Setup: HuggingFace vs. Ollama
 You must first choose an LLM provider and configure your `.env` file (`e:\FullStack\Sales_AI_Assistant\.env`). 
 
 **Option A: HuggingFace (Cloud)**
@@ -32,7 +38,7 @@ DB_PORT=5432
 
 ---
 
-## 2. Core Concept: Generation vs. Querying
+## 3. Core Concept: Generation vs. Querying
 It is important to understand that **Knowledge Base Generation** and **Running the Query Pipeline** are completely different things:
 
 1. **Knowledge Base Generation (Creating the Data):** This parses raw datasets into searchable bases. **These are already generated** and present in the `Knowledge_Bases/` directory. 
@@ -45,7 +51,7 @@ It is important to understand that **Knowledge Base Generation** and **Running t
 
 ---
 
-## 3. Running the Query Pipeline
+## 4. Running the Query Pipeline
 To get a response to a user query, simply run the pipeline:
 ```bash
 python Query_Pipeline/main.py
@@ -60,7 +66,7 @@ selected = TEST_QUERIES[0]
 
 ---
 
-## 4. Data & Schema Reference
+## 5. Data & Schema Reference
 If you need to inspect how the raw data or databases are structured:
 * **PostgreSQL Schemas:** See `datasets/schema.txt` (includes `salespersons`, `projects`, `events`, etc.)
 * **Raw JSON Data:** Check the `datasets/` folder for calendars, emails, and meeting notes.
