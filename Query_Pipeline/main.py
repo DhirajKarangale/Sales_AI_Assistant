@@ -1,13 +1,3 @@
-"""
-Sales AI Assistant — Query Pipeline Entry Point
-
-Run this script to execute the complete query-response pipeline.
-Directly passes a hardcoded salesperson user ID and query into the pipeline.
-
-Usage:
-    python run_query.py
-"""
-
 import os
 import sys
 import logging
@@ -16,7 +6,6 @@ from dotenv import load_dotenv
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
 
-# Ensure project root is on the path
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
@@ -25,10 +14,8 @@ from Query_Pipeline.workflow import run_pipeline
 from utils.ollama import start_connection
 
 def main():
-    # Initialize the LLM connection before executing pipeline
     start_connection()
     
-    # --- Test Queries ---
     TEST_QUERIES = [
         {
             "name": "Roman",
@@ -57,7 +44,6 @@ def main():
         }
     ]
 
-    # Select the query to run (0 to 4)
     selected = TEST_QUERIES[1]
     SALESPERSON_ID = selected["salesperson_id"]
     USER_QUERY = selected["query"]

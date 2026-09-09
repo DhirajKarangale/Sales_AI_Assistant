@@ -1,5 +1,6 @@
 import sys
 import os
+import shutil
 
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 if project_root not in sys.path:
@@ -91,7 +92,6 @@ def conditional_edge(state: GraphState):
     return "generate_knowledge"
 
 def node_save_files(state: GraphState):
-    import shutil
     print("Saving files...")
     kb_dir = os.path.join(project_root, "Knowledge_Bases", "Database")
     

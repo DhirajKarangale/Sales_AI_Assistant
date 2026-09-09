@@ -5,7 +5,6 @@ project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(_
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
-import psycopg2
 from utils.db import init_db
 
 def extract_schema():
@@ -14,7 +13,6 @@ def extract_schema():
     schema_info = {}
 
     try:
-        # Get all tables
         cur.execute("SELECT table_name FROM information_schema.tables WHERE table_schema='public' AND table_type='BASE TABLE'")
         tables = [row[0] for row in cur.fetchall()]
 
@@ -25,11 +23,9 @@ def extract_schema():
                 "foreign_keys": []
             }
 
-            # Get columns
             cur.execute(f"SELECT column_name, data_type FROM information_schema.columns WHERE table_name = '{table}'")
             columns = cur.fetchall()
             
-            # Check if 'updated_at' column exists for sorting
             has_updated_at = any(col[0] == 'updated_at' for col in columns)
 
             for col_name, data_type in columns:
@@ -39,7 +35,6 @@ def extract_schema():
                     "sample_values": []
                 }
                 
-                # Fetch sample values
                 try:
                     if has_updated_at:
                         cur.execute(f"SELECT {col_name} FROM {table} WHERE {col_name} IS NOT NULL AND {col_name}::text != '' GROUP BY {col_name} ORDER BY max(updated_at) DESC LIMIT 5")
@@ -53,7 +48,6 @@ def extract_schema():
 
                 table_info["columns"].append(col_info)
 
-            # Get Primary Keys
             try:
                 cur.execute(f"""
                     SELECT a.attname
@@ -68,7 +62,6 @@ def extract_schema():
                 print(f"Error fetching PKs for {table}: {e}")
                 conn.rollback()
 
-            # Get Foreign Keys
             try:
                 cur.execute(f"""
                     SELECT

@@ -23,7 +23,6 @@ if not HF_TOKENS:
     raise ValueError("HF_TOKENS environment variable contains no valid tokens.")
 
 class AllTokensExhaustedException(Exception):
-    """Raised when all HuggingFace API tokens provided in HF_TOKENS environment variable are exhausted or rate-limited."""
     pass
 
 

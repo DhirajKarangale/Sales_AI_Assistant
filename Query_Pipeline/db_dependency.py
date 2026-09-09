@@ -7,21 +7,15 @@ if project_root not in sys.path:
 
 from utils.llm import invoke_llm
 
-# Lightweight models for simple boolean classification
 DEPENDENCY_MODELS = ["llama3_1_8b", "phi3_mini", "qwen2_5_7b"]
 
 
 def node_detect_db_dependencies(state: dict) -> dict:
-    """For each extracted question, determine whether database data is required.
-    
-    Returns a boolean per question. Uses a batched LLM call for efficiency.
-    """
     questions = state["questions"]
 
     if not questions:
         return {"questions": questions}
 
-    # Build a batched prompt with all questions
     questions_text = "\n".join([
         f"  {q['index']}: {q['text']}"
         for q in questions
@@ -54,19 +48,16 @@ Respond with ONLY valid JSON in this exact format:
         result = invoke_llm(DEPENDENCY_MODELS, prompt, parse_as_json=True)
         results_list = result.get("results", [])
 
-        # Build a lookup map
         dependency_map = {r["index"]: r["needs_db"] for r in results_list}
 
-        # Update questions with the dependency flags
         updated_questions = []
         for q in questions:
-            # needs_db = dependency_map.get(q["index"], True)  # Default to True if missing
+            # needs_db = dependency_map.get(q["index"], True)  
             needs_db = False # TEMPORARY: Hardcoded to False to skip DBAgent for testing
             q_copy = dict(q)
             q_copy["needs_db"] = bool(needs_db)
             updated_questions.append(q_copy)
             
-            # Added logs for db dependency
             status = "YES" if needs_db else "NO"
             print(f"  - Q{q['index']} needs DB? {status}")
 
@@ -74,7 +65,6 @@ Respond with ONLY valid JSON in this exact format:
 
     except Exception as e:
         print(f"[DBDependency] Error during detection: {e}")
-        # Fallback: assume all questions need DB
         updated_questions = []
         for q in questions:
             q_copy = dict(q)

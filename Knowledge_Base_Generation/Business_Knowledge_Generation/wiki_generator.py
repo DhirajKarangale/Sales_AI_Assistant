@@ -67,7 +67,6 @@ def generate_wikis(events: list[dict], base_dir: str):
         proj = event.get("project")
         participants = event.get("participants", [])
         
-        # Event Wiki
         evt_path = os.path.join(dirs["Events"], f"{event_id}.md")
         evt_wiki = parse_wiki(evt_path)
         evt_wiki["metadata"]["id"] = event_id
@@ -78,7 +77,6 @@ def generate_wikis(events: list[dict], base_dir: str):
         evt_wiki["content"] = event.get("summary", "")
         save_wiki(evt_path, evt_wiki)
         
-        # Salesperson Wiki
         if sp:
             sp_path = os.path.join(dirs["Salespersons"], f"{sanitize_filename(sp)}.md")
             sp_wiki = parse_wiki(sp_path)
@@ -89,7 +87,6 @@ def generate_wikis(events: list[dict], base_dir: str):
                 sp_wiki["content"] = f"# Salesperson: {sp}\n"
             save_wiki(sp_path, sp_wiki)
             
-        # Customer Wiki
         if cust:
             cust_path = os.path.join(dirs["Customers"], f"{sanitize_filename(cust)}.md")
             cust_wiki = parse_wiki(cust_path)
@@ -99,7 +96,6 @@ def generate_wikis(events: list[dict], base_dir: str):
                 cust_wiki["content"] = f"# Customer: {cust}\n"
             save_wiki(cust_path, cust_wiki)
             
-        # Project Wiki
         if proj:
             proj_path = os.path.join(dirs["Projects"], f"{sanitize_filename(proj)}.md")
             proj_wiki = parse_wiki(proj_path)
@@ -124,7 +120,6 @@ def generate_wikis(events: list[dict], base_dir: str):
                 proj_wiki["content"] = f"# Project: {proj}\n"
             save_wiki(proj_path, proj_wiki)
             
-        # People Wiki
         for p in participants:
             name = p.get("name")
             email = p.get("email")

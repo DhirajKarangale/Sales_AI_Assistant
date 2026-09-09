@@ -2,7 +2,6 @@ import os
 import sys
 import shutil
 
-# Ensure we can import from the sibling modules
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from extractor import extract_all_datasets

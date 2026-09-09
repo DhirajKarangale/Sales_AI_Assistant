@@ -6,7 +6,6 @@ from utils.ollama import invoke_llm as ollama_invoke_llm
 
 load_dotenv()
 
-# Constant variable to switch between providers: "ollama" or "huggingface"
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "huggingface").lower()
 
 def invoke_llm(model_names: list[str], prompt: str, parse_as_json: bool = False):

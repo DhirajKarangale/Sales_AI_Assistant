@@ -15,7 +15,6 @@ def extract_emails(filepath: str) -> list[dict]:
         
     extracted = []
     for item in items:
-        # Some graphs wrap emails in `resourceData` or `message`
         msg = item.get("message", item)
         
         body_content = ""
@@ -91,10 +90,9 @@ def extract_transcripts(filepath: str) -> list[dict]:
         cleaned_transcript = clean_meeting_transcript(transcript_content)
         
         participants = item.get("participants", [])
-        # Add organizer if not in participants
         if "meetingOrganizer" in item and "user" in item["meetingOrganizer"]:
             org_user = item["meetingOrganizer"]["user"]
-            org_email = org_user.get("userPrincipalName", org_user.get("id", "")) # ID is used as fallback
+            org_email = org_user.get("userPrincipalName", org_user.get("id", ""))
             participants.append({"name": org_user.get("displayName", ""), "address": org_email})
             
         metadata = item.get("salesContext", {})

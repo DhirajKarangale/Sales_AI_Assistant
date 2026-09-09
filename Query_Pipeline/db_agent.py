@@ -15,26 +15,17 @@ from Query_Pipeline.kb_loader import (
     load_db_table_wiki,
 )
 
-# Navigator models (schema comprehension)
 NAVIGATOR_MODELS = ["llama3_3_70b", "qwen2_5_72b", "deepseek_v3"]
-
-# Planner models (deep reasoning for SQL strategy)
 PLANNER_MODELS = ["llama3_3_70b", "qwen2_5_72b", "deepseek_r1"]
-
-# Writer models (precise SQL generation)
 WRITER_MODELS = ["llama3_3_70b", "qwen2_5_72b", "deepseek_v3"]
 
-# Known tables in the database (from schema)
 KNOWN_TABLES = {"salespersons", "projects", "events"}
-
-# Known columns per table (from inspected table wikis)
 KNOWN_COLUMNS = {
     "salespersons": {"id", "name", "email", "role", "projects", "created_at", "updated_at"},
     "projects": {"id", "project_name", "customer_name", "salesperson", "status", "created_at", "updated_at"},
     "events": {"id", "salesperson", "participants", "customer_name", "project_name", "summary", "data", "type", "created_at", "updated_at"},
 }
 
-# SQL mutation keywords to reject
 MUTATION_KEYWORDS = [
     r"\bINSERT\b", r"\bUPDATE\b", r"\bDELETE\b", r"\bDROP\b",
     r"\bTRUNCATE\b", r"\bALTER\b", r"\bCREATE\b", r"\bGRANT\b",
@@ -46,10 +37,6 @@ MAX_VALIDATION_RETRIES = 3
 
 
 def _navigate(question_text: str) -> list[str]:
-    """Identify relevant tables for a question using the DB Root Wiki.
-    
-    Returns a list of unique table names.
-    """
     root_wiki = load_db_root_wiki()
     if not root_wiki:
         print("  [Navigator] WARNING: Root Wiki not found, defaulting to all tables")
@@ -73,7 +60,6 @@ Respond with ONLY valid JSON:
     result = invoke_llm(NAVIGATOR_MODELS, prompt, parse_as_json=True)
     tables = result.get("tables", [])
 
-    # Filter to only known tables
     valid_tables = [t for t in tables if t in KNOWN_TABLES]
     if not valid_tables:
         print("  [Navigator] WARNING: No valid tables identified, defaulting to all")
@@ -83,18 +69,9 @@ Respond with ONLY valid JSON:
 
 
 def _expand_relationships(tables: list[str]) -> dict:
-    """Expand the table list with related tables using the Knowledge Graph.
-    
-    Python-only — no LLM needed. Parses Knowledge_Graph.md for relationships.
-    Returns expanded tables and relationship details.
-    """
     kg_content = load_db_knowledge_graph()
-
-    # Parse relationships from the Knowledge Graph markdown
     relationships = []
 
-    # Extract table relationships from the markdown table
-    # Format: | Source Table | Target Table | Relationship Type | Details |
     table_pattern = re.compile(
         r"\|\s*(\w+)\s*\|\s*(\w+)\s*\|\s*([^|]+)\|\s*([^|]+)\|"
     )
@@ -105,18 +82,16 @@ def _expand_relationships(tables: list[str]) -> dict:
         rel_type = match.group(3).strip()
         details = match.group(4).strip()
 
-        # Skip header rows
         if source in ("Source Table", "Source Column", "---", "------------"):
             continue
 
         relationships.append({
-            "source_table": source.split(".")[0],  # Handle column references
+            "source_table": source.split(".")[0],
             "target_table": target.split(".")[0],
             "type": rel_type,
             "details": details,
         })
 
-    # Expand: for each selected table, add directly related tables (1-hop)
     expanded = set(tables)
     initial_tables = set(tables)
     for rel in relationships:
@@ -127,7 +102,6 @@ def _expand_relationships(tables: list[str]) -> dict:
         if tgt in initial_tables and src in KNOWN_TABLES:
             expanded.add(src)
 
-    # Filter relevant relationships (both endpoints in expanded set)
     relevant_rels = [
         r for r in relationships
         if r["source_table"] in expanded and r["target_table"] in expanded
@@ -140,10 +114,6 @@ def _expand_relationships(tables: list[str]) -> dict:
 
 
 def _load_table_schemas(tables: list[str]) -> dict[str, str]:
-    """Load full wiki content for each table.
-    
-    Python-only. Reads from Knowledge_Bases/Database/Tables/.
-    """
     schemas = {}
     for table in tables:
         wiki = load_db_table_wiki(table)
@@ -157,16 +127,10 @@ def _load_table_schemas(tables: list[str]) -> dict[str, str]:
 def _plan_query(question_text: str, table_schemas: dict, relationships: list,
                 salesperson_id: str, salesperson_info: dict,
                 validation_feedback: str = None) -> str:
-    """Plan the SQL query strategy using an LLM.
-    
-    Returns a natural language plan describing what the SQL should do.
-    """
-    # Build schema context
     schema_context = ""
     for table, wiki in table_schemas.items():
         schema_context += f"\n--- Table: {table} ---\n{wiki}\n"
 
-    # Build relationships context
     rel_context = ""
     for r in relationships:
         rel_context += f"  - {r['source_table']} → {r['target_table']} ({r['type']}): {r['details']}\n"
@@ -213,10 +177,6 @@ Revise your plan to address the validation errors above.
 
 
 def _write_sql(plan: str, table_schemas: dict, relationships: list) -> str:
-    """Convert the plan into an actual SQL query.
-    
-    Returns the SQL string.
-    """
     schema_context = ""
     for table, wiki in table_schemas.items():
         schema_context += f"\n--- Table: {table} ---\n{wiki}\n"
@@ -248,7 +208,6 @@ Return ONLY the SQL query. No explanations, no markdown code fences, no prefixes
 
     sql = invoke_llm(WRITER_MODELS, prompt, parse_as_json=False)
 
-    # Strip common markdown artifacts
     sql = sql.strip()
     if sql.startswith("```sql"):
         sql = sql[6:]
@@ -258,44 +217,33 @@ Return ONLY the SQL query. No explanations, no markdown code fences, no prefixes
         sql = sql[:-3]
     sql = sql.strip()
 
-    # Ensure it ends with a single semicolon
     sql = sql.rstrip(";").strip() + ";"
 
     return sql
 
 
 def _validate_sql(sql: str, expanded_tables: list[str], table_schemas: dict) -> dict:
-    """Validate the SQL query using Python-based checks.
-    
-    Returns {"valid": True} or {"valid": False, "feedback": "..."}.
-    """
     feedback_items = []
 
-    # 1. Check for mutation keywords
     for kw_pattern in MUTATION_KEYWORDS:
         if re.search(kw_pattern, sql, re.IGNORECASE):
             keyword = kw_pattern.replace(r"\b", "")
             feedback_items.append(f"REJECTED: SQL contains mutation keyword '{keyword}'. Only SELECT queries are allowed.")
 
-    # 2. Check it starts with SELECT
     sql_upper = sql.strip().upper()
-    # Remove leading comments
     clean_sql = re.sub(r"--.*?\n", "", sql, flags=re.MULTILINE).strip().upper()
     clean_sql = re.sub(r"/\*.*?\*/", "", clean_sql, flags=re.DOTALL).strip()
     if not clean_sql.startswith("SELECT") and not clean_sql.startswith("WITH"):
         feedback_items.append("REJECTED: SQL must start with SELECT or WITH (CTE). Found something else.")
 
-    # 3. Check for multiple statements safely (ignoring semicolons inside single quotes)
     sql_no_strings = re.sub(r"'[^']*'", "''", sql)
     statements = [s.strip() for s in sql_no_strings.rstrip(";").split(";") if s.strip()]
     if len(statements) > 1:
         feedback_items.append("REJECTED: Multiple SQL statements detected. Only a single SELECT statement is allowed.")
 
-    # 4. Validate table references and extract aliases
     table_refs = set()
     alias_map = {}
     
-    # Match FROM/JOIN table AS alias or FROM/JOIN table alias
     from_join_pattern = re.compile(
         r"(?:FROM|JOIN)\s+([a-zA-Z0-9_]+)(?:\s+(?:AS\s+)?([a-zA-Z0-9_]+))?", re.IGNORECASE
     )
@@ -313,16 +261,13 @@ def _validate_sql(sql: str, expanded_tables: list[str], table_schemas: dict) -> 
                 f"Valid tables are: {', '.join(sorted(KNOWN_TABLES))}."
             )
 
-    # 5. Validate column references (table.column format)
     col_ref_pattern = re.compile(r"([a-zA-Z0-9_]+)\.([a-zA-Z0-9_]+)")
     for match in col_ref_pattern.finditer(sql_no_strings):
         table_or_alias = match.group(1).lower()
         column = match.group(2).lower()
 
-        # Resolve alias to actual table name if it exists
         actual_table = alias_map.get(table_or_alias, table_or_alias)
 
-        # Validate if it maps to a known table
         if actual_table in KNOWN_COLUMNS:
             if column not in KNOWN_COLUMNS[actual_table]:
                 feedback_items.append(
@@ -337,10 +282,6 @@ def _validate_sql(sql: str, expanded_tables: list[str], table_schemas: dict) -> 
 
 
 def _execute_sql(sql: str) -> dict:
-    """Execute the validated SQL query and return results.
-    
-    Returns {sql, columns, rows, row_count} or {sql, error}.
-    """
     conn = None
     try:
         conn = init_db()
@@ -348,10 +289,8 @@ def _execute_sql(sql: str) -> dict:
         cur.execute(sql)
         rows = [dict(row) for row in cur.fetchall()]
 
-        # Get column names
         columns = [desc[0] for desc in cur.description] if cur.description else []
 
-        # Convert non-serializable types to strings
         for row in rows:
             for key, val in row.items():
                 if not isinstance(val, (str, int, float, bool, type(None), list, dict)):
@@ -376,14 +315,6 @@ def _execute_sql(sql: str) -> dict:
 
 
 def node_db_agent_process(state: dict) -> dict:
-    """Orchestrate the DB agent pipeline for all questions that need database data.
-    
-    For each question with needs_db=True:
-      1. Navigate → identify relevant tables
-      2. Expand relationships → add related tables
-      3. Load table schemas
-      4. Plan → Write → Validate → (retry or execute)
-    """
     questions = state["questions"]
     salesperson_id = state["salesperson_id"]
     salesperson_info = state["salesperson_info"]
@@ -399,28 +330,23 @@ def node_db_agent_process(state: dict) -> dict:
 
         print(f"\n[DBAgent] Processing Q{q['index']}: {q['text']}")
 
-        # Step 1: Navigate
         print(f"  [Navigator] Identifying relevant tables...")
         tables = _navigate(q["text"])
 
-        # Step 2: Expand relationships
         print(f"  [RelExpander] Expanding with related tables...")
         expanded = _expand_relationships(tables)
         expanded_tables = expanded["tables"]
         relationships = expanded["relationships"]
 
-        # Step 3: Load table schemas
         print(f"  [SchemaLoader] Loading table schemas...")
         table_schemas = _load_table_schemas(expanded_tables)
 
-        # Step 4: Plan → Write → Validate → Retry loop
         validation_feedback = None
         db_result = None
 
         for attempt in range(MAX_VALIDATION_RETRIES):
             print(f"  [Attempt {attempt + 1}/{MAX_VALIDATION_RETRIES}]")
 
-            # Plan
             print(f"    [Planner] Planning SQL query...")
             plan = _plan_query(
                 q["text"], table_schemas, relationships,
@@ -428,24 +354,20 @@ def node_db_agent_process(state: dict) -> dict:
                 validation_feedback
             )
 
-            # Write
             print(f"    [Writer] Generating SQL...")
             sql = _write_sql(plan, table_schemas, relationships)
 
-            # Validate
             print(f"    [Validator] Validating SQL...")
             validation = _validate_sql(sql, expanded_tables, table_schemas)
 
             if validation["valid"]:
                 print(f"    [Validator] PASS")
 
-                # Execute
                 print(f"    [Executor] Executing SQL...")
                 db_result = _execute_sql(sql)
 
                 if "error" in db_result:
                     print(f"    [Executor] Error: {db_result['error']}")
-                    # Treat execution error as validation failure for retry
                     validation_feedback = f"SQL execution failed: {db_result['error']}. Fix the SQL."
                     db_result = None
                     continue
@@ -456,7 +378,6 @@ def node_db_agent_process(state: dict) -> dict:
                 print(f"    [Validator] FAIL: {validation['feedback']}")
                 validation_feedback = validation["feedback"]
 
-        # If all retries exhausted
         if db_result is None:
             print(f"  [DBAgent] All attempts exhausted for Q{q['index']}")
             db_result = {

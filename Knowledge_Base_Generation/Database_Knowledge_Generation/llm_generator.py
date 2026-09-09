@@ -8,20 +8,17 @@ if project_root not in sys.path:
 
 from utils.llm import invoke_llm
 
-# Generation Models (Strong logic, structures)
 GEN_MODELS = [
     "qwen2_5_72b",
     "llama3_3_70b",
 ]
 
-# Graph extraction models (Strong reasoning)
 GRAPH_MODELS = [
     "deepseek_r1",
     "llama3_3_70b",
     "qwen2_5_72b"
 ]
 
-# Fact Checking / Validation Models
 VALIDATION_MODELS = [
     "veritas_8b_fact_checker",
     "deepseek_v3",

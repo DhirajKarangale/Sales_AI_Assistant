@@ -10,15 +10,10 @@ from psycopg2.extras import RealDictCursor
 from utils.db import init_db
 from utils.llm import invoke_llm
 
-# Models for query normalization and question extraction (complex reasoning + structured output)
 OPTIMIZER_MODELS = ["llama3_3_70b", "qwen2_5_72b", "deepseek_v3"]
 
 
 def node_fetch_salesperson_info(state: dict) -> dict:
-    """Fetch salesperson data and their projects from the database.
-    
-    No LLM needed — pure database query.
-    """
     salesperson_id = state["salesperson_id"]
     print(f"[QueryOptimizer] Fetching salesperson info for ID: {salesperson_id}")
 
@@ -27,7 +22,6 @@ def node_fetch_salesperson_info(state: dict) -> dict:
         conn = init_db()
         cur = conn.cursor(cursor_factory=RealDictCursor)
 
-        # Fetch salesperson record
         cur.execute(
             "SELECT id, name, email, role FROM salespersons WHERE id = %s",
             (salesperson_id,)
@@ -38,14 +32,12 @@ def node_fetch_salesperson_info(state: dict) -> dict:
             print(f"[QueryOptimizer] Salesperson not found: {salesperson_id}")
             return {"error": f"Salesperson with ID '{salesperson_id}' not found in the database."}
 
-        # Fetch their projects
         cur.execute(
             "SELECT id, project_name, customer_name, status FROM projects WHERE salesperson = %s",
             (salesperson_id,)
         )
         projects = [dict(row) for row in cur.fetchall()]
 
-        # Convert UUIDs to strings for JSON compatibility
         salesperson_info = {
             "id": str(sp_row["id"]),
             "name": sp_row["name"],
@@ -76,10 +68,6 @@ def node_fetch_salesperson_info(state: dict) -> dict:
 
 
 def node_normalize_query(state: dict) -> dict:
-    """Clean, normalize, and resolve the user query using an LLM.
-    
-    Resolves relative dates, normalizes units, removes filler words.
-    """
     raw_query = state["raw_query"]
     salesperson_info = state["salesperson_info"]
 
@@ -87,7 +75,6 @@ def node_normalize_query(state: dict) -> dict:
     current_date = now.strftime("%Y-%m-%d")
     current_day = now.strftime("%A")
 
-    # Build project context for the LLM
     projects_summary = "\n".join([
         f"  - {p['project_name']} (Customer: {p['customer_name']}, Status: {p['status']})"
         for p in salesperson_info.get("projects", [])
@@ -135,10 +122,6 @@ Return ONLY the cleaned/normalized query text. No explanations, no JSON, no code
 
 
 def node_extract_questions(state: dict) -> dict:
-    """Decompose the normalized query into independent sub-questions.
-    
-    Preserves question order. Single questions are returned as a single-item list.
-    """
     normalized_query = state["normalized_query"]
     salesperson_info = state["salesperson_info"]
 

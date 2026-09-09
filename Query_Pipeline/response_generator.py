@@ -1,6 +1,5 @@
 import sys
 import os
-import json
 import re
 
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -12,27 +11,18 @@ from Query_Pipeline.kb_loader import (
     load_business_knowledge_graph,
     load_business_wiki,
     list_business_wikis,
-    parse_wiki,
 )
 
-# Response generation models (long-form, grounded answer synthesis)
 RESPONSE_MODELS = ["llama3_3_70b", "qwen2_5_72b", "deepseek_v3"]
 
-# Knowledge graph traversal limits
 MAX_GRAPH_DEPTH = 2
 MAX_GRAPH_BREADTH = 10
 
 
 def _build_context_subgraph(knowledge_graph: dict, salesperson_info: dict) -> set:
-    """Traverse the Business Knowledge Graph from the salesperson's context.
-    
-    Performs BFS from salesperson-related nodes with depth and breadth limits.
-    Returns a set of node IDs that form the relevant subgraph.
-    """
     nodes_by_id = {n["id"]: n for n in knowledge_graph.get("nodes", [])}
     edges = knowledge_graph.get("edges", [])
 
-    # Build adjacency list
     adjacency = {}
     for edge in edges:
         src = edge["source"]
@@ -44,7 +34,6 @@ def _build_context_subgraph(knowledge_graph: dict, salesperson_info: dict) -> se
             adjacency[tgt] = []
         adjacency[tgt].append(src)
 
-    # Seed nodes: salesperson name, their projects, and their customers
     seed_nodes = set()
     sp_name = salesperson_info.get("name", "")
     if sp_name and sp_name in nodes_by_id:
@@ -59,10 +48,8 @@ def _build_context_subgraph(knowledge_graph: dict, salesperson_info: dict) -> se
             seed_nodes.add(cust_name)
 
     if not seed_nodes:
-        # If no seeds found by exact name, return empty
         return set()
 
-    # BFS traversal with depth and breadth limits
     visited = set()
     queue = [(node_id, 0) for node_id in seed_nodes]
 
@@ -79,7 +66,6 @@ def _build_context_subgraph(knowledge_graph: dict, salesperson_info: dict) -> se
         if len(visited) >= MAX_GRAPH_BREADTH:
             break
 
-        # Add neighbors
         for neighbor in adjacency.get(node_id, []):
             if neighbor not in visited:
                 queue.append((neighbor, depth + 1))
@@ -88,11 +74,6 @@ def _build_context_subgraph(knowledge_graph: dict, salesperson_info: dict) -> se
 
 
 def _select_relevant_wikis(subgraph_nodes: set, salesperson_info: dict) -> list[dict]:
-    """Map subgraph nodes to Business wiki files and load their content.
-    
-    Scans all wiki categories for wikis whose metadata 'name' matches a subgraph node.
-    Returns a list of {"category", "name", "metadata", "content"} dicts.
-    """
     categories = ["Salespersons", "Customers", "Projects", "Persons", "Events"]
     relevant_wikis = []
 
@@ -102,7 +83,6 @@ def _select_relevant_wikis(subgraph_nodes: set, salesperson_info: dict) -> list[
             wiki = load_business_wiki(category, wiki_name)
             wiki_entity_name = wiki.get("metadata", {}).get("name", "")
 
-            # Check if this wiki's entity is in the subgraph
             if wiki_entity_name in subgraph_nodes:
                 relevant_wikis.append({
                     "category": category,
@@ -111,19 +91,16 @@ def _select_relevant_wikis(subgraph_nodes: set, salesperson_info: dict) -> list[
                     "content": wiki.get("content", ""),
                 })
 
-    # Also include salesperson-related wikis by checking projects/customers
     sp_name = salesperson_info.get("name", "")
     for category in categories:
         wiki_names = list_business_wikis(category)
         for wiki_name in wiki_names:
-            # Skip already included
             if any(w["name"] == wiki_name and w["category"] == category for w in relevant_wikis):
                 continue
 
             wiki = load_business_wiki(category, wiki_name)
             meta = wiki.get("metadata", {})
 
-            # Check if this wiki references the salesperson
             if sp_name and (
                 meta.get("salesperson") == sp_name
                 or sp_name in meta.get("salespersons", [])
@@ -138,7 +115,6 @@ def _select_relevant_wikis(subgraph_nodes: set, salesperson_info: dict) -> list[
     return relevant_wikis
 
 
-# Human-readable event type mapping
 _EVENT_TYPE_MAP = {
     "calendar_event": "Meeting",
     "meet": "Meeting",
@@ -149,12 +125,10 @@ _EVENT_TYPE_MAP = {
 
 
 def _humanize_event_type(raw_type: str) -> str:
-    """Translate internal event type codes to human-readable labels."""
     return _EVENT_TYPE_MAP.get(raw_type.lower().strip(), raw_type) if raw_type else "Interaction"
 
 
 def _humanize_date(raw_date: str) -> str:
-    """Convert an ISO timestamp to a readable date string like 'September 8, 2026'."""
     if not raw_date:
         return ""
     try:
@@ -166,11 +140,6 @@ def _humanize_date(raw_date: str) -> str:
 
 
 def _format_wiki_context(wikis: list[dict]) -> str:
-    """Format loaded wikis into a clean, human-readable context string.
-    
-    Strips internal IDs, file paths, and raw metadata. Presents only meaningful
-    business information the LLM needs to compose a natural response.
-    """
     if not wikis:
         return "No relevant business information available."
 
@@ -188,21 +157,18 @@ def _format_wiki_context(wikis: list[dict]) -> str:
             salesperson = meta.get("salesperson", "")
             created_at = _humanize_date(meta.get("created_at", ""))
 
-            # Extract created_at from content if not in metadata
             if not created_at and content:
                 for line in content.split("\n"):
                     if line.strip().startswith("Created At:"):
                         created_at = _humanize_date(line.split(":", 1)[1].strip())
                         break
 
-            # Extract summary from content
             summary = ""
             for line in content.split("\n"):
                 if line.strip().startswith("**Summary**:") or line.strip().startswith("**Summary**"):
                     summary = line.split(":", 1)[1].strip() if ":" in line else ""
                     break
 
-            # Extract participants (names only, strip emails)
             participants = []
             in_participants = False
             for line in content.split("\n"):
@@ -212,10 +178,8 @@ def _format_wiki_context(wikis: list[dict]) -> str:
                 if in_participants:
                     if line.strip().startswith("- "):
                         name_part = line.strip()[2:]
-                        # Strip email in parentheses
                         if "(" in name_part:
                             name_part = name_part.split("(")[0].strip()
-                        # Skip internal salesperson email aliases
                         if name_part.lower().startswith("salesperson"):
                             continue
                         participants.append(name_part)
@@ -238,7 +202,6 @@ def _format_wiki_context(wikis: list[dict]) -> str:
             if participants:
                 detail_lines.append(f"Participants: {', '.join(participants)}")
 
-            # Include raw data section (discussion content) without the heading
             raw_data_lines = []
             in_raw = False
             for line in content.split("\n"):
@@ -257,7 +220,6 @@ def _format_wiki_context(wikis: list[dict]) -> str:
 
         elif category == "Projects":
             customer = meta.get("customer", "")
-            # Extract status and dates from content
             status = ""
             created_at = ""
             updated_at = ""
@@ -283,31 +245,23 @@ def _format_wiki_context(wikis: list[dict]) -> str:
             parts.append("\n".join(detail_lines))
 
         elif category in ("Salespersons", "Customers", "Persons"):
-            # Minimal context — just the name
             label = "Salesperson" if category == "Salespersons" else (
                 "Customer" if category == "Customers" else "Contact"
             )
             parts.append(f"--- {label}: {entity_name} ---")
 
         else:
-            # Fallback: include content without raw metadata
             parts.append(f"--- {entity_name} ---\n{content}")
 
     return "\n\n".join(parts)
 
 
 def _format_db_results(questions: list[dict]) -> str:
-    """Format DB results into a clean context string without technical details.
-    
-    Strips Q-labels, SQL statements, and raw JSON. Presents data as plain
-    readable facts the LLM can reference.
-    """
     parts = []
 
     for q in questions:
         db_res = q.get("db_results")
         if db_res is None:
-            # No DB query was needed — skip silently (KB context will cover it)
             continue
 
         if "error" in db_res and db_res["error"]:
@@ -319,23 +273,18 @@ def _format_db_results(questions: list[dict]) -> str:
             parts.append(f"Regarding \"{q['text']}\" — no matching records were found.")
             continue
 
-        # Format rows as readable key-value pairs
         row_strs = []
-        for row in rows[:20]:  # Limit to 20 rows
+        for row in rows[:20]:
             fields = []
             for key, val in row.items():
-                # Skip internal ID fields
                 if key.lower() in ("id",):
                     continue
-                # Humanize date fields
                 if key.lower() in ("created_at", "updated_at") and val:
                     val = _humanize_date(str(val))
                     key = "Date" if key.lower() == "created_at" else "Last Updated"
-                # Humanize event type
                 if key.lower() == "type" and isinstance(val, str):
                     val = _humanize_event_type(val)
                     key = "Type"
-                # Clean up column names
                 display_key = key.replace("_", " ").title()
                 fields.append(f"{display_key}: {val}")
             if fields:
@@ -349,35 +298,22 @@ def _format_db_results(questions: list[dict]) -> str:
 
 
 def node_generate_response(state: dict) -> dict:
-    """Generate the final response using all gathered context.
-    
-    Combines: user query, questions, DB results, Business KB wikis, and knowledge graph.
-    Produces a natural, user-friendly answer suitable for a salesperson.
-    """
     raw_query = state["raw_query"]
-    normalized_query = state.get("normalized_query", raw_query)
     questions = state["questions"]
     salesperson_info = state["salesperson_info"]
 
     print(f"\n[ResponseGenerator] Building context and generating response...")
 
-    # 1. Load and traverse Business Knowledge Graph
     print(f"  [Context] Loading Business Knowledge Graph...")
     kg = load_business_knowledge_graph()
     subgraph_nodes = _build_context_subgraph(kg, salesperson_info)
 
-    # 2. Select and load relevant wikis
     print(f"  [Context] Selecting relevant Business wikis...")
     relevant_wikis = _select_relevant_wikis(subgraph_nodes, salesperson_info)
 
     wiki_context = _format_wiki_context(relevant_wikis)
     db_context = _format_db_results(questions)
 
-    # 3. Build the user-friendly response prompt
-    # Pass the questions as plain text without index labels
-    questions_plain = "\n".join([f"  - {q['text']}" for q in questions])
-
-    # Combine all available context
     data_sections = []
     if wiki_context and wiki_context != "No relevant business information available.":
         data_sections.append(wiki_context)

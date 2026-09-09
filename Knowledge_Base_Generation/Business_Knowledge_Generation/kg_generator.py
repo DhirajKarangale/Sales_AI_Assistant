@@ -29,10 +29,8 @@ def generate_knowledge_graph(events: list[dict], base_dir: str):
         proj = event.get("project")
         participants = event.get("participants", [])
 
-        # Add Event Node
         add_node(evt_id, "Event", {"type": evt_type, "summary": event.get("summary")})
 
-        # Add Salesperson Node and Edges
         if sp:
             add_node(sp, "Salesperson")
             add_edge(sp, evt_id, "PARTICIPATED_IN")
@@ -41,19 +39,16 @@ def generate_knowledge_graph(events: list[dict], base_dir: str):
             if proj:
                 add_edge(sp, proj, "OWNS")
 
-        # Add Customer Node and Edges
         if cust:
             add_node(cust, "Customer")
             if proj:
                 add_edge(cust, proj, "HAS_PROJECT")
             add_edge(cust, evt_id, "INVOLVED_IN")
 
-        # Add Project Node and Edges
         if proj:
             add_node(proj, "Project")
             add_edge(proj, evt_id, "HAS_EVENT")
 
-        # Add Person Nodes and Edges
         for p in participants:
             email = p.get("email")
             name = p.get("name")

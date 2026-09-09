@@ -34,12 +34,10 @@ def validator_node(state: EventState) -> dict:
 
 def normalizer_node(state: EventState) -> dict:
     normalized = normalizer_agent(state["extracted_entities"], state["cleaned_data"])
-    # ensure source_id is carried over
     normalized["source_id"] = state["raw_event"].get("source_id")
     return {"normalized_event": normalized}
 
 def fallback_node(state: EventState) -> dict:
-    # Safe fallback if retries exceeded
     fallback_entities = {
         "event_type": state["raw_event"].get("event_type"),
         "participants": state["raw_event"].get("participants", []),
@@ -86,11 +84,9 @@ def build_workflow():
     
     return workflow.compile()
 
-# Singleton graph instance
 app_workflow = build_workflow()
 
 def process_event(raw_event: dict) -> dict:
-    """Entry function to execute graph for a single event."""
     initial_state = {
         "raw_event": raw_event,
         "cleaned_data": raw_event.get("cleaned_data", ""),
@@ -101,6 +97,5 @@ def process_event(raw_event: dict) -> dict:
         "normalized_event": {}
     }
     
-    # Run the graph
     final_state = app_workflow.invoke(initial_state)
     return final_state["normalized_event"]
