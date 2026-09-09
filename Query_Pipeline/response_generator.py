@@ -212,12 +212,10 @@ def node_generate_response(state: dict) -> dict:
     print(f"  [Context] Loading Business Knowledge Graph...")
     kg = load_business_knowledge_graph()
     subgraph_nodes = _build_context_subgraph(kg, salesperson_info)
-    print(f"  [Context] Subgraph contains {len(subgraph_nodes)} relevant nodes")
 
     # 2. Select and load relevant wikis
     print(f"  [Context] Selecting relevant Business wikis...")
     relevant_wikis = _select_relevant_wikis(subgraph_nodes, salesperson_info)
-    print(f"  [Context] Found {len(relevant_wikis)} relevant wiki(s)")
 
     wiki_context = _format_wiki_context(relevant_wikis)
     db_context = _format_db_results(questions)

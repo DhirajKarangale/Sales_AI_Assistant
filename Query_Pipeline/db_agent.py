@@ -399,14 +399,12 @@ def node_db_agent_process(state: dict) -> dict:
         # Step 1: Navigate
         print(f"  [Navigator] Identifying relevant tables...")
         tables = _navigate(q["text"])
-        print(f"  [Navigator] Tables: {tables}")
 
         # Step 2: Expand relationships
         print(f"  [RelExpander] Expanding with related tables...")
         expanded = _expand_relationships(tables)
         expanded_tables = expanded["tables"]
         relationships = expanded["relationships"]
-        print(f"  [RelExpander] Expanded tables: {expanded_tables}")
 
         # Step 3: Load table schemas
         print(f"  [SchemaLoader] Loading table schemas...")
@@ -426,12 +424,10 @@ def node_db_agent_process(state: dict) -> dict:
                 salesperson_id, salesperson_info,
                 validation_feedback
             )
-            print(f"    [Planner] Plan: {plan[:200]}...")
 
             # Write
             print(f"    [Writer] Generating SQL...")
             sql = _write_sql(plan, table_schemas, relationships)
-            print(f"    [Writer] SQL: {sql}")
 
             # Validate
             print(f"    [Validator] Validating SQL...")

@@ -129,7 +129,6 @@ Return ONLY the cleaned/normalized query text. No explanations, no JSON, no code
 
     print(f"[QueryOptimizer] Normalizing query...")
     normalized = invoke_llm(OPTIMIZER_MODELS, prompt, parse_as_json=False)
-    print(f"[QueryOptimizer] Normalized query: {normalized}")
 
     return {"normalized_query": normalized}
 
@@ -174,8 +173,6 @@ Respond with ONLY valid JSON in this exact format:
         for i, q in enumerate(raw_questions)
     ]
 
-    print(f"[QueryOptimizer] Extracted {len(questions)} question(s):")
-    for q in questions:
-        print(f"  Q{q['index']}: {q['text']}")
+    print(f"[QueryOptimizer] Extracted {len(questions)} question(s)")
 
     return {"questions": questions}

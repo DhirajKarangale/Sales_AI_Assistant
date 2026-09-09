@@ -64,7 +64,6 @@ Respond with ONLY valid JSON in this exact format:
             q_copy = dict(q)
             q_copy["needs_db"] = bool(needs_db)
             updated_questions.append(q_copy)
-            print(f"  Q{q_copy['index']}: needs_db={q_copy['needs_db']}")
 
         return {"questions": updated_questions}
 
