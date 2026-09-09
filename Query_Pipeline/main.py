@@ -25,15 +25,40 @@ from Query_Pipeline.workflow import run_pipeline
 
 
 def main():
-    # --- Hardcoded test inputs ---
-    # Kurt's salesperson ID (from salespersons table sample data)
-    SALESPERSON_ID = "ec37371f-22f8-4cec-bbd0-74d162bfe67c"
+    # --- Test Queries ---
+    TEST_QUERIES = [
+        {
+            "name": "Roman",
+            "salesperson_id": "ec37371f-22f8-4cec-bbd0-74d162bfe67c",
+            "query": "I'm prepping for a call with Acme Corp. Can you summarize our last meeting about the CRM Migration and tell me who was on it?"
+        },
+        {
+            "name": "Brock",
+            "salesperson_id": "710c8ecf-6340-4edf-a4e9-06513d500a59",
+            "query": "What's the current status of the Data Warehouse deal? When was the last time we actually had a touchpoint with them?"
+        },
+        {
+            "name": "Steve",
+            "salesperson_id": "f52f2cff-2e14-4da5-9c85-3f8114d0d5d6",
+            "query": "Did anyone ever reply to my email regarding the implementation timeline for the ERP Integration?"
+        },
+        {
+            "name": "Kurt",
+            "salesperson_id": "09cfdc46-a939-4899-8a40-17cda3f97786",
+            "query": "Pull up the latest emails and meeting notes for the Marketing Automation project so I can get up to speed on where we left off."
+        },
+        {
+            "name": "John",
+            "salesperson_id": "99ff091f-bf2c-429d-a556-22f59525412f",
+            "query": "Can you give me a quick rundown of all the active accounts I am handling right now?"
+        }
+    ]
 
-    # Example query combining multiple sub-questions
-    USER_QUERY = "What's the latest update on the AI Analytics Platform and which meetings happened last week?"
+    # Select the query to run (0 to 4)
+    selected = TEST_QUERIES[0]
+    SALESPERSON_ID = selected["salesperson_id"]
+    USER_QUERY = selected["query"]
 
-    print("\n" + "=" * 70)
-    print("  SALES AI ASSISTANT — Query Pipeline Test")
     print("=" * 70)
     print(f"  Salesperson ID : {SALESPERSON_ID}")
     print(f"  Query          : {USER_QUERY}")

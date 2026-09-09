@@ -11,7 +11,7 @@ from utils.db import init_db
 from utils.huggingface import invoke_llm
 
 # Models for query normalization and question extraction (complex reasoning + structured output)
-OPTIMIZER_MODELS = ["deepseek_v3", "qwen2_5_72b", "llama3_3_70b"]
+OPTIMIZER_MODELS = ["llama3_3_70b", "qwen2_5_72b", "deepseek_v3"]
 
 
 def node_fetch_salesperson_info(state: dict) -> dict:

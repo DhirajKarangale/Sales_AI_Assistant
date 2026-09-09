@@ -16,7 +16,7 @@ from Query_Pipeline.kb_loader import (
 )
 
 # Response generation models (long-form, grounded answer synthesis)
-RESPONSE_MODELS = ["deepseek_v3", "qwen2_5_72b", "llama3_3_70b"]
+RESPONSE_MODELS = ["llama3_3_70b", "qwen2_5_72b", "deepseek_v3"]
 
 # Knowledge graph traversal limits
 MAX_GRAPH_DEPTH = 2

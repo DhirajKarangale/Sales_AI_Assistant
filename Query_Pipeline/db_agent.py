@@ -16,13 +16,13 @@ from Query_Pipeline.kb_loader import (
 )
 
 # Navigator models (schema comprehension)
-NAVIGATOR_MODELS = ["qwen2_5_72b", "llama3_3_70b", "deepseek_v3"]
+NAVIGATOR_MODELS = ["llama3_3_70b", "qwen2_5_72b", "deepseek_v3"]
 
 # Planner models (deep reasoning for SQL strategy)
-PLANNER_MODELS = ["deepseek_r1", "qwen2_5_72b", "llama3_3_70b"]
+PLANNER_MODELS = ["llama3_3_70b", "qwen2_5_72b", "deepseek_r1"]
 
 # Writer models (precise SQL generation)
-WRITER_MODELS = ["deepseek_v3", "qwen2_5_72b", "llama3_3_70b"]
+WRITER_MODELS = ["llama3_3_70b", "qwen2_5_72b", "deepseek_v3"]
 
 # Known tables in the database (from schema)
 KNOWN_TABLES = {"salespersons", "projects", "events"}

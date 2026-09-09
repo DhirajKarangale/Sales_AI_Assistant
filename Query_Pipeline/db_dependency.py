@@ -8,7 +8,7 @@ if project_root not in sys.path:
 from utils.huggingface import invoke_llm
 
 # Lightweight models for simple boolean classification
-DEPENDENCY_MODELS = ["qwen2_5_7b", "llama3_1_8b", "phi3_mini"]
+DEPENDENCY_MODELS = ["llama3_1_8b", "phi3_mini", "qwen2_5_7b"]
 
 
 def node_detect_db_dependencies(state: dict) -> dict:
