@@ -126,8 +126,4 @@ def run_pipeline(salesperson_id: str, query: str) -> str:
 
     response = final_state.get("final_response", "No response generated.")
 
-    print("\n" + "=" * 70)
-    print("QUERY PIPELINE — COMPLETE")
-    print("=" * 70)
-
     return response
