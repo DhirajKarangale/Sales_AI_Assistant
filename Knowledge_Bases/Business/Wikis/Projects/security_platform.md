@@ -1,11 +1,9 @@
 ---
-name: "Security Platform"
-status: "Active"
-latest_update: "2026-09-09T03:40:04.858712"
-created_at: "2026-09-09T03:40:04.859714"
-customers: ["SecureNet"]
-salespersons: []
-meetings: ["e653f667-7013-46ac-a75d-df6510f160a4"]
+id: Security_Platform
+type: Project
+name: Security Platform
+customer: SecureNet
 ---
 
 # Project: Security Platform
+Associated Customer: SecureNet

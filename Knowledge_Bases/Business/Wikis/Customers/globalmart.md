@@ -1,6 +1,7 @@
 ---
-name: "GlobalMart"
-projects: ["ERP Integration"]
+id: GlobalMart
+type: Customer
+name: GlobalMart
 ---
 
 # Customer: GlobalMart

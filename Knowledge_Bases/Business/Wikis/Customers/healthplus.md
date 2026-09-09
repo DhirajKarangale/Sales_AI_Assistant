@@ -1,6 +1,7 @@
 ---
-name: "HealthPlus"
-projects: ["Customer Portal"]
+id: HealthPlus
+type: Customer
+name: HealthPlus
 ---
 
 # Customer: HealthPlus

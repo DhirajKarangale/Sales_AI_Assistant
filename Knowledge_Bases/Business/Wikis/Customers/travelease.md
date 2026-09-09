@@ -1,6 +1,7 @@
 ---
-name: "TravelEase"
-projects: ["Mobile App"]
+id: TravelEase
+type: Customer
+name: TravelEase
 ---
 
 # Customer: TravelEase

@@ -1,6 +1,7 @@
 ---
-name: "TechNova"
-projects: ["Data Warehouse"]
+id: TechNova
+type: Customer
+name: TechNova
 ---
 
 # Customer: TechNova

@@ -1,6 +1,7 @@
 ---
-name: "Acme Corp"
-projects: ["CRM Migration", "Cloud Upgrade", "Marketing Automation"]
+id: Acme_Corp
+type: Customer
+name: Acme Corp
 ---
 
 # Customer: Acme Corp
