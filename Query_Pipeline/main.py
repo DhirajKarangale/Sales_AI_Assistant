@@ -71,8 +71,7 @@ def main():
         response = run_pipeline(SALESPERSON_ID, USER_QUERY)
 
         print("\n" + "=" * 70)
-        print("  FINAL RESPONSE")
-        print("=" * 70)
+        print("  FINAL RESPONSE: ")
         print(response)
         print("=" * 70 + "\n")
 
